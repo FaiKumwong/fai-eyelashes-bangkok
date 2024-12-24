@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
         <div className="w-full h-96 rounded-lg overflow-hidden">
           <iframe 
-            src="https://www.google.com/maps/place/Waterford+Sukhumvit+50/@13.7065412,100.5879249,16z/data=!4m6!3m5!1s0x30e29f95b83bdfe9:0xfaba138e651e3ed9!8m2!3d13.7067861!4d100.5930425!16s%2Fg%2F1wzs_txb?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7752.393146317586!2d100.5879249!3d13.7065412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f95b83bdfe9%3A0xfaba138e651e3ed9!2sWaterford%20Sukhumvit%2050!5e0!3m2!1snl!2sth!4v1735070685168!5m2!1snl!2sth"
             width="100%"
             height="100%"
             style={{ border: 0 }}
