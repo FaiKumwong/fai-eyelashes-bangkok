@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
         <div className="w-full h-96 rounded-lg overflow-hidden">
           <iframe 
-            src="https://maps.app.goo.gl/hUmmCVJ8DQoca6x68"
+            src="https://maps.app.goo.gl/h381JMdQoJFnXdjB9"
             width="100%"
             height="100%"
             style={{ border: 0 }}
