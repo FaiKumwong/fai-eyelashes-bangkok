@@ -1,0 +1,58 @@
+import React from 'react';
+import { Star } from 'lucide-react';
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    rating: 5,
+    comment: "Absolutely love my new lashes! The service was professional and the results are stunning.",
+    date: "March 2024"
+  },
+  {
+    name: "Emily Davis",
+    rating: 5,
+    comment: "Best lash artist in town! Natural looking and long-lasting results.",
+    date: "March 2024"
+  },
+  {
+    name: "Michelle Lee",
+    rating: 4,
+    comment: "Great experience and beautiful results. Will definitely come back!",
+    date: "February 2024"
+  }
+];
+
+const Testimonials = () => {
+  return (
+    <section className="py-20 bg-gradient-to-b from-purple-50 to-pink-50" id="testimonials">
+      <div className="container mx-auto px-6">
+        <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+          Client Love
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-pink-100">
+              <div className="flex mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className={`w-5 h-5 ${
+                      i < testimonial.rating ? 'text-pink-400 fill-current' : 'text-gray-300'
+                    }`}
+                  />
+                ))}
+              </div>
+              <p className="text-gray-600 mb-4">{testimonial.comment}</p>
+              <div className="flex justify-between items-center">
+                <span className="font-medium text-purple-600">{testimonial.name}</span>
+                <span className="text-sm text-pink-400">{testimonial.date}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Testimonials;
