@@ -2,11 +2,13 @@ import React from 'react';
 
 interface HeroContentProps {
   translations: {
-    hero: {
-      title: string;
-      subtitle: string;
-      bookButton: string;
-    };
+    [key: string]: {
+      hero: {
+        title: string;
+        subtitle: string;
+        bookButton: string;
+      }
+    }
   };
   language: string;
 }
