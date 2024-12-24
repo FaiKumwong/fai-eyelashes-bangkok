@@ -1,12 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import React from 'react';
+import Hero from '@/components/landing/Hero';
+import Services from '@/components/landing/Services';
+import Testimonials from '@/components/landing/Testimonials';
+import Booking from '@/components/landing/Booking';
+import Footer from '@/components/landing/Footer';
+import { Metadata } from '@/components/Metadata';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Metadata 
+        title="Fai Eyelashes - Premium Eyelash Extensions in Bangkok"
+        description="Transform your look with premium eyelash extensions at Fai Eyelashes. Professional service, natural results, and a luxurious experience in Bangkok."
+      />
+      <Hero />
+      <Services />
+      <Testimonials />
+      <Booking />
+      <Footer />
     </div>
   );
 };
