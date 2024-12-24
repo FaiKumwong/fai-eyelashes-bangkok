@@ -6,11 +6,11 @@ const Hero = () => {
   const [language, setLanguage] = useState('en');
 
   const carouselImages = [
-    "https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=1920&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1561916542-c8888474c582?w=1920&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1587393855524-087f83d95bc9?w=1920&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1513097847644-f00cfe868607?w=1920&h=600&fit=crop",
-    "https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&h=600&fit=crop"
+    "/lovable-uploads/190b47c4-6ba6-4557-8773-f6c519e3cd31.png",
+    "/lovable-uploads/3db74b41-0201-4f73-bfa6-4c2f183ce923.png",
+    "/lovable-uploads/b512175b-f441-4177-9048-5a330e3ad2ae.png",
+    "/lovable-uploads/d8939ed6-b0f2-4c3e-99ff-eeeb6044605c.png",
+    "/lovable-uploads/2ca5201b-ac58-4ad6-9166-57a07b0f978f.png"
   ];
 
   const translations = {

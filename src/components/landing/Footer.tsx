@@ -2,16 +2,37 @@ import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
+  const [language, setLanguage] = useState('en');
+
+  const translations = {
+    en: {
+      contactUs: 'Contact Us',
+      address: 'Sukhumvit soi 50 (On Nut)',
+      businessHours: 'Business Hours',
+      weekdays: 'Monday - Friday: 8:00 AM - 8:00 PM',
+      weekends: 'Saturday - Sunday: 9:00 AM - 9:00 PM',
+      connectWithUs: 'Connect With Us'
+    },
+    th: {
+      contactUs: 'ติดต่อเรา',
+      address: 'สุขุมวิท ซอย 50 (อ่อนนุช)',
+      businessHours: 'เวลาทำการ',
+      weekdays: 'วันจันทร์ - วันศุกร์: 8:00 น. - 20:00 น.',
+      weekends: 'วันเสาร์ - วันอาทิตย์: 9:00 น. - 21:00 น.',
+      connectWithUs: 'เชื่อมต่อกับเรา'
+    }
+  };
+
   return (
     <footer className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-bold mb-4">Contact Us</h3>
+            <h3 className="text-xl font-bold mb-4">{translations[language].contactUs}</h3>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <MapPin className="w-5 h-5" />
-                <span>Sukhumvit soi 50 (On Nut)</span>
+                <span>{translations[language].address}</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-5 h-5" />
@@ -24,14 +45,14 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Business Hours</h3>
+            <h3 className="text-xl font-bold mb-4">{translations[language].businessHours}</h3>
             <div className="space-y-2">
-              <p>Monday - Friday: 8:00 AM - 8:00 PM</p>
-              <p>Saturday - Sunday: 9:00 AM - 9:00 PM</p>
+              <p>{translations[language].weekdays}</p>
+              <p>{translations[language].weekends}</p>
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
+            <h3 className="text-xl font-bold mb-4">{translations[language].connectWithUs}</h3>
             <div className="flex items-center space-x-6">
               <div className="flex space-x-4">
                 <a 
