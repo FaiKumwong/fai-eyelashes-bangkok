@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 
 const Footer = () => {
