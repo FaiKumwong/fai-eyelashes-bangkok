@@ -23,9 +23,9 @@ const HeroContent = ({ translations, language }: HeroContentProps) => {
         <p className="text-xl text-white mb-8 drop-shadow-lg">
           {translations[language].hero.subtitle}
         </p>
-        <button className="bg-white text-pink-500 px-8 py-3 rounded-full text-lg font-semibold hover:bg-pink-50 transition-colors duration-300">
-          {translations[language].hero.bookButton}
-        </button>
+        <button className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300">
+  {translations[language].hero.bookButton}
+</button>
       </div>
     </div>
   );
