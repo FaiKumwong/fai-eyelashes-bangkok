@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Metadata 
-        title="Fai Eyelashes - Premium Eyelash Extensions in Bangkok"
-        description="Transform your look with premium eyelash extensions at Fai Eyelashes. Professional service, natural results, and a luxurious experience in Bangkok."
+        title="Fai Eyelashes - Premium Eyelash Extensions in Bangkok On Nut"
+        description="Transform your look with premium eyelash extensions at Fai Eyelashes. Professional service, natural results, and a luxurious experience in Bangkok On Nut."
       />
       <Hero />
       <Services />
