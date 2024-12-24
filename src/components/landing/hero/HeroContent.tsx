@@ -15,8 +15,8 @@ interface HeroContentProps {
 
 const HeroContent = ({ translations, language }: HeroContentProps) => {
   return (
-    <div className="absolute inset-0 flex items-center justify-center text-center">
-      <div className="max-w-3xl px-6">
+    <div className="absolute inset-0 flex items-end justify-start text-left p-6">
+      <div className="max-w-3xl">
         <h1 className="text-5xl font-bold text-white mb-6 drop-shadow-lg">
           {translations[language].hero.title}
         </h1>
