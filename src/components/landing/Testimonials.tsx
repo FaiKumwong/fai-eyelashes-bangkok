@@ -1,36 +1,66 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 
-const testimonials = [
-  {
-    name: "Sarah Johnson",
-    rating: 5,
-    comment: "Absolutely love my new lashes! The service was professional and the results are stunning.",
-    date: "March 2024"
-  },
-  {
-    name: "Emily Davis",
-    rating: 5,
-    comment: "Best lash artist in town! Natural looking and long-lasting results.",
-    date: "March 2024"
-  },
-  {
-    name: "Michelle Lee",
-    rating: 4,
-    comment: "Great experience and beautiful results. Will definitely come back!",
-    date: "February 2024"
-  }
-];
-
 const Testimonials = () => {
+  const [language, setLanguage] = useState('en');
+
+  const translations = {
+    en: {
+      title: "Client Love",
+      testimonials: [
+        {
+          name: "Sarah Johnson",
+          rating: 5,
+          comment: "Absolutely love my new lashes! The service was professional and the results are stunning.",
+          date: "March 2024"
+        },
+        {
+          name: "Emily Davis",
+          rating: 5,
+          comment: "Best lash artist in town! Natural looking and long-lasting results.",
+          date: "March 2024"
+        },
+        {
+          name: "Michelle Lee",
+          rating: 4,
+          comment: "Great experience and beautiful results. Will definitely come back!",
+          date: "February 2024"
+        }
+      ]
+    },
+    th: {
+      title: "รีวิวจากลูกค้า",
+      testimonials: [
+        {
+          name: "สุนิสา จันทร์เพ็ญ",
+          rating: 5,
+          comment: "รักขนตาใหม่มากเลยค่ะ! บริการเป็นมืออาชีพและผลลัพธ์สวยมาก",
+          date: "มีนาคม 2567"
+        },
+        {
+          name: "วรรณา สมิธ",
+          rating: 5,
+          comment: "ช่างต่อขนตาที่ดีที่สุดในกรุงเทพฯ! ดูเป็นธรรมชาติและติดทนมาก",
+          date: "มีนาคม 2567"
+        },
+        {
+          name: "มิเชล ลี",
+          rating: 4,
+          comment: "ประสบการณ์ที่ยอดเยี่ยมและผลลัพธ์ที่สวยงาม จะกลับมาใช้บริการอีกแน่นอน!",
+          date: "กุมภาพันธ์ 2567"
+        }
+      ]
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-b from-purple-50 to-pink-50" id="testimonials">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-          Client Love
+          {translations[language].title}
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+          {translations[language].testimonials.map((testimonial, index) => (
             <div key={index} className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-pink-100">
               <div className="flex mb-4">
                 {[...Array(5)].map((_, i) => (
