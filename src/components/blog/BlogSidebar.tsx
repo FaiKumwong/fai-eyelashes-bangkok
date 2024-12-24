@@ -1,48 +1,21 @@
 import React from 'react';
 
 const BlogSidebar = () => {
-  const categories = [
-    "Lash Care Tips",
-    "Beauty Trends",
-    "Client Stories",
-    "Product Reviews",
-    "Industry News"
-  ];
-
-  const recentPosts = [
-    "The Benefits of Volume Lashes",
-    "How to Prepare for Your First Lash Appointment",
-    "Summer Lash Care Guide",
-    "Why Choose Professional Lash Extensions"
-  ];
-
   return (
-    <div className="space-y-8">
-      <div className="bg-white rounded-2xl shadow-lg p-6">
-        <h3 className="text-xl font-bold mb-4 text-gray-800">Categories</h3>
-        <ul className="space-y-2">
-          {categories.map((category, index) => (
-            <li key={index}>
-              <a href="#" className="text-gray-600 hover:text-pink-500 transition-colors">
-                {category}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="bg-white rounded-2xl shadow-lg p-6">
-        <h3 className="text-xl font-bold mb-4 text-gray-800">Recent Posts</h3>
-        <ul className="space-y-2">
-          {recentPosts.map((post, index) => (
-            <li key={index}>
-              <a href="#" className="text-gray-600 hover:text-pink-500 transition-colors">
-                {post}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="space-y-6">
+      <h3 className="text-xl font-semibold">Categories</h3>
+      <ul className="list-disc pl-5">
+        <li>Beauty Tips</li>
+        <li>Lash Extensions</li>
+        <li>Product Reviews</li>
+        <li>Client Stories</li>
+      </ul>
+      <h3 className="text-xl font-semibold">Recent Posts</h3>
+      <ul className="space-y-2">
+        <li><a href="#" className="text-blue-500 hover:underline">How to Care for Your Lash Extensions</a></li>
+        <li><a href="#" className="text-blue-500 hover:underline">Top 5 Lash Trends of 2024</a></li>
+        <li><a href="#" className="text-blue-500 hover:underline">Client Spotlight: Sarah's Transformation</a></li>
+      </ul>
     </div>
   );
 };
