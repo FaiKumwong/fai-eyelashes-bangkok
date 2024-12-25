@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
-  const [language, setLanguage] = useState('en');
+  const { language } = useLanguage();
 
   const translations = {
     en: {
@@ -24,7 +25,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-12">
+    <footer className="bg-gradient-to-r from-pink-500 to-purple-500 text-white py-12" id="contact">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
@@ -82,7 +83,7 @@ const Footer = () => {
         </div>
         <div className="w-full h-96 rounded-lg overflow-hidden">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7752.393146317586!2d100.5879249!3d13.7065412!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f95b83bdfe9%3A0xfaba138e651e3ed9!2sWaterford%20Sukhumvit%2050!5e0!3m2!1snl!2sth!4v1735070685168!5m2!1snl!2sth"
+            src="https://maps.app.goo.gl/hUmmCVJ8DQoca6x68"
             width="100%"
             height="100%"
             style={{ border: 0 }}
