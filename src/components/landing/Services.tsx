@@ -14,12 +14,12 @@ const Services = () => {
         },
         {
           title: "Volume Lashes",
-          description: "Fuller look with multiple extensions per natural lash",
+          description: "Fuller look with multiple extensions per natural lash       ",
           price: "฿ 899"
         },
         {
           title: "Hybrid Lashes",
-          description: "Mix of Classic and Volume for a customized look",
+          description: "Mix of Classic and Volume for a customized look             ",
           price: "฿ 899"
         }
       ]
