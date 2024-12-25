@@ -22,6 +22,11 @@ const Services = () => {
           description: "Mix of classic and volume for a customized look",
           price: "฿1,500"
         }
+{
+          title: "Hybrid Lashes",
+          description: "Mix of classic and volume for a customized look",
+          price: "฿1,500"
+        }
       ]
     },
     th: {
