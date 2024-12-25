@@ -47,7 +47,7 @@ const Services = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-pink-200 to-pink-500" id="services">
+    <section className="py-20 bg-gradient-to-b from-pink-200 to-pink-300" id="services">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-12 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
           {translations[language].title}
