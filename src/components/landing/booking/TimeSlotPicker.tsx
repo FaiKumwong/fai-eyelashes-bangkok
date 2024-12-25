@@ -32,8 +32,8 @@ const TimeSlotPicker = () => {
 
   return (
     <div className="grid md:grid-cols-2 gap-8">
-      <div className="flex flex-col items-center">
-        <h3 className="text-lg font-semibold mb-4">{translations[language].selectDate}</h3>
+      <div>
+        <h3 className="text-xl font-semibold mb-4">{translations[language].selectDate}</h3>
         <div className="w-full max-w-sm bg-gradient-to-r from-pink-300 to-pink-200 p-4 rounded-lg">
           <Calendar
             mode="single"
@@ -41,17 +41,17 @@ const TimeSlotPicker = () => {
             onSelect={setDate}
             className="mx-auto bg-transparent text-white font-medium"
             classNames={{
-              day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:bg-purple-600 hover:text-white font-bold",
-              day: "text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white font-medium transition-all duration-200",
-              head_cell: "text-white font-bold",
+              day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:bg-purple-600 hover:text-white font-bold text-lg",
+              day: "text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white font-medium transition-all duration-200 text-lg",
+              head_cell: "text-white font-bold text-lg",
               nav_button: "text-white hover:bg-purple-400 transition-colors",
-              caption: "text-white font-bold"
+              caption: "text-white font-bold text-xl"
             }}
           />
         </div>
       </div>
       <div>
-        <h3 className="text-lg font-semibold mb-4">{translations[language].available}</h3>
+        <h3 className="text-xl font-semibold mb-4">{translations[language].available}</h3>
         <div className="grid grid-cols-2 gap-3">
           {TIME_SLOTS.map((slot) => (
             <button
