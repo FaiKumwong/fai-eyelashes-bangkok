@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [language, setLanguage] = useState('en');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const translations = {
     en: {
@@ -27,6 +29,14 @@ const Navigation = () => {
     }
   };
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
       <div className="container mx-auto px-6 py-4">
@@ -34,6 +44,18 @@ const Navigation = () => {
           <Link to="/" className="text-2xl font-bold text-white">
             Fai Eyelashes
           </Link>
+
+          {/* Mobile Menu Button */}
+          <div className="flex items-center md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="text-white p-2"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
+
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <div className="flex items-center space-x-4 mr-4">
               <button
@@ -62,28 +84,67 @@ const Navigation = () => {
                 </svg>
               </button>
             </div>
-            <a href="#services" className="text-white hover:text-white/80">
+            <button onClick={() => scrollToSection('services')} className="text-white hover:text-white/80">
               {translations[language].nav.services}
-            </a>
-            <a href="#gallery" className="text-white hover:text-white/80">
+            </button>
+            <Link to="/gallery" className="text-white hover:text-white/80">
               {translations[language].nav.gallery}
-            </a>
-            <a href="#testimonials" className="text-white hover:text-white/80">
+            </Link>
+            <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-white/80">
               {translations[language].nav.testimonials}
-            </a>
-            <a href="#contact" className="text-white hover:text-white/80">
+            </button>
+            <button onClick={() => scrollToSection('contact')} className="text-white hover:text-white/80">
               {translations[language].nav.contact}
-            </a>
+            </button>
             <Link to="/blog" className="text-white hover:text-white/80">
               {translations[language].nav.blog}
             </Link>
           </div>
+
           <button 
+            onClick={() => scrollToSection('booking')}
             className="bg-gradient-to-r from-pink-300 to-pink-200 text-pink-500 px-6 py-2 rounded-full hover:from-pink-400 hover:to-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold"
           >
             {translations[language].nav.bookNow}
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 w-full bg-gradient-to-r from-pink-500 to-purple-500 py-4">
+            <div className="flex flex-col space-y-4 px-6">
+              <div className="flex justify-center space-x-4 mb-4">
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`${language === 'en' ? 'text-white' : 'text-white/70'}`}
+                >
+                  EN
+                </button>
+                <button
+                  onClick={() => setLanguage('th')}
+                  className={`${language === 'th' ? 'text-white' : 'text-white/70'}`}
+                >
+                  TH
+                </button>
+              </div>
+              <button onClick={() => scrollToSection('services')} className="text-white hover:text-white/80">
+                {translations[language].nav.services}
+              </button>
+              <Link to="/gallery" className="text-white hover:text-white/80">
+                {translations[language].nav.gallery}
+              </Link>
+              <button onClick={() => scrollToSection('testimonials')} className="text-white hover:text-white/80">
+                {translations[language].nav.testimonials}
+              </button>
+              <button onClick={() => scrollToSection('contact')} className="text-white hover:text-white/80">
+                {translations[language].nav.contact}
+              </button>
+              <Link to="/blog" className="text-white hover:text-white/80">
+                {translations[language].nav.blog}
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
