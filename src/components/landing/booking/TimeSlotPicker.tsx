@@ -32,26 +32,35 @@ const TimeSlotPicker = () => {
 
   return (
     <div className="grid md:grid-cols-2 gap-8">
-      <div>
+      <div className="flex flex-col items-center">
         <h3 className="text-lg font-semibold mb-4">{translations[language].selectDate}</h3>
-        <Calendar
-          mode="single"
-          selected={date}
-          onSelect={setDate}
-          className="rounded-md border bg-pink-50 hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-300"
-        />
+        <div className="w-full max-w-sm bg-gradient-to-r from-pink-300 to-pink-200 p-4 rounded-lg">
+          <Calendar
+            mode="single"
+            selected={date}
+            onSelect={setDate}
+            className="mx-auto bg-transparent text-white font-medium"
+            classNames={{
+              day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:bg-purple-600 hover:text-white font-bold",
+              day: "text-white hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white font-medium transition-all duration-200",
+              head_cell: "text-white font-bold",
+              nav_button: "text-white hover:bg-purple-400 transition-colors",
+              caption: "text-white font-bold"
+            }}
+          />
+        </div>
       </div>
       <div>
         <h3 className="text-lg font-semibold mb-4">{translations[language].available}</h3>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-2 gap-3">
           {TIME_SLOTS.map((slot) => (
             <button
               key={slot}
               onClick={() => setSelectedSlot(slot)}
-              className={`p-2 rounded-md border transition-all duration-300 ${
+              className={`p-3 rounded-lg text-white font-medium transition-all duration-300 ${
                 selectedSlot === slot
-                  ? 'bg-gradient-to-r from-purple-500 to-purple-400 text-white border-purple-600'
-                  : 'bg-pink-50 hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-300 hover:text-white border-pink-200'
+                  ? 'bg-gradient-to-r from-purple-500 to-purple-400'
+                  : 'bg-gradient-to-r from-pink-400 to-pink-300 hover:from-purple-500 hover:to-purple-400'
               }`}
             >
               {slot}
