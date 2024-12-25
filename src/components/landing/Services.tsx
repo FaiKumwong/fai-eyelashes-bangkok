@@ -10,17 +10,17 @@ const Services = () => {
         {
           title: "Classic Lashes",
           description: "Natural-looking enhancement with one extension per natural lash",
-          price: "฿ 699"
+          price: "฿ 799"
         },
         {
           title: "Volume Lashes",
           description: "Fuller look with multiple extensions per natural lash",
-          price: "฿ 799"
+          price: "฿ 899"
         },
         {
           title: "Hybrid Lashes",
           description: "Mix of Classic and Volume for a customized look",
-          price: "฿ 799"
+          price: "฿ 899"
         }
       ]
     },
@@ -30,17 +30,17 @@ const Services = () => {
         {
           title: "ขนตาแบบคลาสสิค",
           description: "เสริมความงามแบบธรรมชาติด้วยขนตาต่อหนึ่งเส้นต่อขนตาจริงหนึ่งเส้น",
-          price: "฿ 699"
+          price: "฿ 799"
         },
         {
           title: "ขนตาแบบวอลลุ่ม",
           description: "ลุคที่เต็มด้วยขนตาหลายเส้นต่อขนตาจริงหนึ่งเส้น",
-          price: "฿ 799"
+          price: "฿ 899"
         },
         {
           title: "ขนตาแบบไฮบริด",
           description: "ผสมผสานระหว่างแบบคลาสสิคและวอลลุ่มเพื่อลุคที่เป็นเอกลักษณ์",
-          price: "฿ 799"
+          price: "฿ 899"
         }
       ]
     }
