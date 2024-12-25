@@ -4,7 +4,13 @@ import LanguageSelector from './LanguageSelector';
 
 interface MobileMenuProps {
   isOpen: boolean;
-  translations: any;
+  translations: {
+    services: string;
+    gallery: string;
+    testimonials: string;
+    contact: string;
+    blog: string;
+  };
   scrollToSection: (id: string) => void;
 }
 

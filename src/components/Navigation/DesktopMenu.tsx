@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
 
 interface DesktopMenuProps {
-  translations: any;
+  translations: {
+    services: string;
+    gallery: string;
+    testimonials: string;
+    contact: string;
+    blog: string;
+  };
   scrollToSection: (id: string) => void;
 }
 

@@ -60,7 +60,7 @@ const Navigation = () => {
           </div>
 
           <DesktopMenu 
-            translations={translations[language].nav} 
+            translations={translations[language]} 
             scrollToSection={scrollToSection} 
           />
 
@@ -74,7 +74,7 @@ const Navigation = () => {
 
         <MobileMenu 
           isOpen={isMenuOpen}
-          translations={translations[language].nav}
+          translations={translations[language]}
           scrollToSection={scrollToSection}
         />
       </div>
