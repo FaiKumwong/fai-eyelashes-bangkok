@@ -38,7 +38,7 @@ const TimeSlotPicker = () => {
           mode="single"
           selected={date}
           onSelect={setDate}
-          className="rounded-md border"
+          className="rounded-md border bg-pink-50 hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-300"
         />
       </div>
       <div>
@@ -48,10 +48,10 @@ const TimeSlotPicker = () => {
             <button
               key={slot}
               onClick={() => setSelectedSlot(slot)}
-              className={`p-2 rounded-md border transition-colors ${
+              className={`p-2 rounded-md border transition-all duration-300 ${
                 selectedSlot === slot
-                  ? 'bg-pink-500 text-white border-pink-600'
-                  : 'hover:bg-pink-50 border-gray-200'
+                  ? 'bg-gradient-to-r from-purple-500 to-purple-400 text-white border-purple-600'
+                  : 'bg-pink-50 hover:bg-gradient-to-r hover:from-purple-400 hover:to-purple-300 hover:text-white border-pink-200'
               }`}
             >
               {slot}
