@@ -1,20 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface MobileMenuProps {
   isOpen: boolean;
   translations: {
-    services: string;
-    gallery: string;
-    testimonials: string;
-    contact: string;
-    blog: string;
+    en: {
+      services: string;
+      gallery: string;
+      testimonials: string;
+      contact: string;
+      blog: string;
+    };
+    th: {
+      services: string;
+      gallery: string;
+      testimonials: string;
+      contact: string;
+      blog: string;
+    };
   };
   scrollToSection: (id: string) => void;
 }
 
 const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) => {
+  const { language } = useLanguage();
+  
   if (!isOpen) return null;
 
   return (
@@ -25,31 +37,31 @@ const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) 
           onClick={() => scrollToSection('services')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations.services}
+          {translations[language].services}
         </button>
         <Link 
           to="/gallery" 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations.gallery}
+          {translations[language].gallery}
         </Link>
         <button 
           onClick={() => scrollToSection('testimonials')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations.testimonials}
+          {translations[language].testimonials}
         </button>
         <button 
           onClick={() => scrollToSection('contact')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations.contact}
+          {translations[language].contact}
         </button>
         <Link 
           to="/blog" 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations.blog}
+          {translations[language].blog}
         </Link>
       </div>
     </div>
