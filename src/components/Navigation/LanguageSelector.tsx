@@ -11,7 +11,7 @@ const LanguageSelector = () => {
         className={`flex items-center space-x-1 transition-all duration-300 ${
           language === 'en' 
             ? 'text-white scale-105' 
-            : 'text-white/50 filter blur-[0.5px] hover:blur-0 hover:text-white/70'
+            : 'text-white/50 opacity-50 blur-[0.3px] hover:opacity-70'
         }`}
       >
         <svg className="w-6 h-4" viewBox="0 0 60 30">
@@ -30,7 +30,7 @@ const LanguageSelector = () => {
         className={`flex items-center space-x-1 transition-all duration-300 ${
           language === 'th' 
             ? 'text-white scale-105' 
-            : 'text-white/50 filter blur-[0.5px] hover:blur-0 hover:text-white/70'
+            : 'text-white/50 opacity-50 blur-[0.3px] hover:opacity-70'
         }`}
       >
         <svg className="w-6 h-4" viewBox="0 0 900 600">

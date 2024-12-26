@@ -49,7 +49,8 @@ const Navigation = () => {
         style={{
           backgroundImage: 'url(/lovable-uploads/927a4887-df5b-4756-a1a7-e149f2441776.png)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          backgroundPosition: 'center',
+          height: '80px'
         }}
       />
       <div className="container mx-auto px-6 py-4 relative">
@@ -58,11 +59,8 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/1a245a47-4a4f-4651-a353-f1f105132607.png" 
               alt="Fai Eyelashes Logo" 
-              className="h-12 w-auto"
+              className="h-12 w-auto object-contain"
             />
-            <span className="text-2xl font-bold text-white">
-              Fai Eyelashes
-            </span>
           </Link>
 
           <div className="flex items-center md:hidden">
