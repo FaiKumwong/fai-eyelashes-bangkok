@@ -1,32 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
-import { useLanguage } from '@/contexts/LanguageContext';
+
+interface TranslationType {
+  services: string;
+  gallery: string;
+  testimonials: string;
+  contact: string;
+  blog: string;
+}
 
 interface MobileMenuProps {
   isOpen: boolean;
-  translations: {
-    en: {
-      services: string;
-      gallery: string;
-      testimonials: string;
-      contact: string;
-      blog: string;
-    };
-    th: {
-      services: string;
-      gallery: string;
-      testimonials: string;
-      contact: string;
-      blog: string;
-    };
-  };
+  translations: TranslationType;
   scrollToSection: (id: string) => void;
 }
 
 const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) => {
-  const { language } = useLanguage();
-  
   if (!isOpen) return null;
 
   return (
@@ -37,31 +27,31 @@ const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) 
           onClick={() => scrollToSection('services')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations[language].services}
+          {translations.services}
         </button>
         <Link 
           to="/gallery" 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations[language].gallery}
+          {translations.gallery}
         </Link>
         <button 
           onClick={() => scrollToSection('testimonials')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations[language].testimonials}
+          {translations.testimonials}
         </button>
         <button 
           onClick={() => scrollToSection('contact')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations[language].contact}
+          {translations.contact}
         </button>
         <Link 
           to="/blog" 
           className="text-white hover:text-white/80 text-center w-full"
         >
-          {translations[language].blog}
+          {translations.blog}
         </Link>
       </div>
     </div>

@@ -3,29 +3,20 @@ import { Link } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+interface TranslationType {
+  services: string;
+  gallery: string;
+  testimonials: string;
+  contact: string;
+  blog: string;
+}
+
 interface DesktopMenuProps {
-  translations: {
-    en: {
-      services: string;
-      gallery: string;
-      testimonials: string;
-      contact: string;
-      blog: string;
-    };
-    th: {
-      services: string;
-      gallery: string;
-      testimonials: string;
-      contact: string;
-      blog: string;
-    };
-  };
+  translations: TranslationType;
   scrollToSection: (id: string) => void;
 }
 
 const DesktopMenu = ({ translations, scrollToSection }: DesktopMenuProps) => {
-  const { language } = useLanguage();
-  
   return (
     <div className="hidden md:flex items-center space-x-8">
       <LanguageSelector />
@@ -33,31 +24,31 @@ const DesktopMenu = ({ translations, scrollToSection }: DesktopMenuProps) => {
         onClick={() => scrollToSection('services')} 
         className="text-white hover:text-white/80"
       >
-        {translations[language].services}
+        {translations.services}
       </button>
       <Link 
         to="/gallery" 
         className="text-white hover:text-white/80"
       >
-        {translations[language].gallery}
+        {translations.gallery}
       </Link>
       <button 
         onClick={() => scrollToSection('testimonials')} 
         className="text-white hover:text-white/80"
       >
-        {translations[language].testimonials}
+        {translations.testimonials}
       </button>
       <button 
         onClick={() => scrollToSection('contact')} 
         className="text-white hover:text-white/80"
       >
-        {translations[language].contact}
+        {translations.contact}
       </button>
       <Link 
         to="/blog" 
         className="text-white hover:text-white/80"
       >
-        {translations[language].blog}
+        {translations.blog}
       </Link>
     </div>
   );
