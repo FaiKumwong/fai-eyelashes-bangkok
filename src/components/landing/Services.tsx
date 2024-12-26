@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Services = () => {
-  const [language, setLanguage] = useState('en');
+  const { language } = useLanguage();
 
   const translations = {
     en: {
@@ -21,6 +22,21 @@ const Services = () => {
           title: "Hybrid Lashes",
           description: "Hybrid lash mix of Classic and Volume for a customized look",
           price: "฿ 899"
+        },
+        {
+          title: "Mega Volume Lashes",
+          description: "Ultra-dramatic look with maximum volume and density",
+          price: "฿ 999"
+        },
+        {
+          title: "Colored Lashes",
+          description: "Add a pop of color to your lash extensions for a unique style",
+          price: "฿ 999"
+        },
+        {
+          title: "Lash Removal",
+          description: "Professional and safe removal of eyelash extensions",
+          price: "฿ 299"
         }
       ]
     },
@@ -34,13 +50,28 @@ const Services = () => {
         },
         {
           title: "ขนตาแบบวอลลุ่ม",
-          description: "ลุคที่เต็มด้วยขนตาหลายเส้นต่อขนตาจริงหนึ่งเส้น                ",
+          description: "ลุคที่เต็มด้วยขนตาหลายเส้นต่อขนตาจริงหนึ่งเส้น",
           price: "฿ 899"
         },
         {
           title: "ขนตาแบบไฮบริด",
-          description: "ผสมผสานระหว่างแบบคลาสสิคและวอลลุ่มเพื่อลุคที่เป็นเอกลักษณ์   ",
+          description: "ผสมผสานระหว่างแบบคลาสสิคและวอลลุ่มเพื่อลุคที่เป็นเอกลักษณ์",
           price: "฿ 899"
+        },
+        {
+          title: "ขนตาเมก้าวอลลุ่ม",
+          description: "ลุคที่ดูหนาแน่นและดูโดดเด่นเป็นพิเศษ",
+          price: "฿ 999"
+        },
+        {
+          title: "ขนตาสี",
+          description: "เพิ่มสีสันให้กับขนตาต่อของคุณเพื่อสไตล์ที่เป็นเอกลักษณ์",
+          price: "฿ 999"
+        },
+        {
+          title: "ถอดขนตา",
+          description: "บริการถอดขนตาต่ออย่างมืออาชีพและปลอดภัย",
+          price: "฿ 299"
         }
       ]
     }

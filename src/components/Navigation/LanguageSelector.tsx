@@ -8,7 +8,11 @@ const LanguageSelector = () => {
     <div className="flex items-center space-x-4 mr-4">
       <button
         onClick={() => setLanguage('en')}
-        className={`flex items-center space-x-1 ${language === 'en' ? 'text-white' : 'text-white/70'}`}
+        className={`flex items-center space-x-1 transition-all duration-300 ${
+          language === 'en' 
+            ? 'text-white scale-105' 
+            : 'text-white/50 filter blur-[0.5px] hover:blur-0 hover:text-white/70'
+        }`}
       >
         <svg className="w-6 h-4" viewBox="0 0 60 30">
           <clipPath id="t">
@@ -23,7 +27,11 @@ const LanguageSelector = () => {
       </button>
       <button
         onClick={() => setLanguage('th')}
-        className={`flex items-center space-x-1 ${language === 'th' ? 'text-white' : 'text-white/70'}`}
+        className={`flex items-center space-x-1 transition-all duration-300 ${
+          language === 'th' 
+            ? 'text-white scale-105' 
+            : 'text-white/50 filter blur-[0.5px] hover:blur-0 hover:text-white/70'
+        }`}
       >
         <svg className="w-6 h-4" viewBox="0 0 900 600">
           <rect fill="#ED1C24" width="900" height="600"/>

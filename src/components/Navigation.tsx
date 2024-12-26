@@ -44,10 +44,25 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
-      <div className="container mx-auto px-6 py-4">
+      <div 
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: 'url(/lovable-uploads/927a4887-df5b-4756-a1a7-e149f2441776.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      <div className="container mx-auto px-6 py-4 relative">
         <div className="flex items-center justify-between">
-          <Link to="/" className="text-2xl font-bold text-white">
-            Fai Eyelashes
+          <Link to="/" className="flex items-center space-x-2">
+            <img 
+              src="/lovable-uploads/1a245a47-4a4f-4651-a353-f1f105132607.png" 
+              alt="Fai Eyelashes Logo" 
+              className="h-12 w-auto"
+            />
+            <span className="text-2xl font-bold text-white">
+              Fai Eyelashes
+            </span>
           </Link>
 
           <div className="flex items-center md:hidden">
@@ -60,7 +75,7 @@ const Navigation = () => {
           </div>
 
           <DesktopMenu 
-            translations={translations[language]} 
+            translations={translations} 
             scrollToSection={scrollToSection} 
           />
 
@@ -74,7 +89,7 @@ const Navigation = () => {
 
         <MobileMenu 
           isOpen={isMenuOpen}
-          translations={translations[language]}
+          translations={translations}
           scrollToSection={scrollToSection}
         />
       </div>
