@@ -3,14 +3,7 @@ import { Calendar } from '@/components/ui/calendar';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { format } from 'date-fns';
 import { th } from 'date-fns/locale';
-import { Facebook, Twitter } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { Facebook, X } from 'lucide-react';
 
 const TIME_SLOTS = [
   '08:00-10:00',
@@ -116,7 +109,7 @@ const TimeSlotPicker = () => {
             rel="noopener noreferrer"
             className="text-purple-500 hover:text-purple-600 transition-colors"
           >
-            <Twitter size={24} />
+            <X size={24} />
           </a>
         </div>
       </div>
