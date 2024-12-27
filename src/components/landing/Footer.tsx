@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, Facebook, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
@@ -71,6 +71,14 @@ const Footer = () => {
                   className="hover:text-pink-200 transition-colors"
                 >
                   <Facebook className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://x.com/faieyelashes" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-pink-200 transition-colors"
+                >
+                  <X className="w-6 h-6" />
                 </a>
               </div>
               <img 
