@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fai Eyelashes Bangkok On Nut</title>
+    <meta name="description" content="Eyelash extensions in Bangkok On Nut" />
+    <meta name="author" content="Fai Eyelashes Bangkok On Nut" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="icon" type="image/png" href="/lovable-uploads/248fee32-17a3-4d81-a75a-dc541d4511c7.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
