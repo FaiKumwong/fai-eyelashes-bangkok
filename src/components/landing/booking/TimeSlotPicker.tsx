@@ -3,7 +3,6 @@ import { Calendar } from '@/components/ui/calendar';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { format } from 'date-fns';
 import { th } from 'date-fns/locale';
-import { Facebook, X } from 'lucide-react';
 
 const TIME_SLOTS = [
   '08:00-10:00',
@@ -24,14 +23,12 @@ const TimeSlotPicker = () => {
     en: {
       selectDate: 'Select Date',
       selectTime: 'Select Time',
-      available: 'Available Time Slots',
-      connectWithUs: 'Connect With Us'
+      available: 'Available Time Slots'
     },
     th: {
       selectDate: 'เลือกวันที่',
       selectTime: 'เลือกเวลา',
-      available: 'ช่วงเวลาที่ว่าง',
-      connectWithUs: 'ติดต่อเรา'
+      available: 'ช่วงเวลาที่ว่าง'
     }
   };
 
@@ -39,9 +36,9 @@ const TimeSlotPicker = () => {
   console.log('Current time slot selected:', selectedSlot);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-4xl mx-auto">
       <div className="grid md:grid-cols-2 gap-8">
-        <div>
+        <div className="flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-4">{translations[language].selectDate}</h3>
           <div className="w-full max-w-sm bg-gradient-to-r from-pink-300 to-pink-200 p-4 rounded-lg shadow-lg">
             <Calendar
@@ -67,9 +64,9 @@ const TimeSlotPicker = () => {
             />
           </div>
         </div>
-        <div>
+        <div className="flex flex-col items-center">
           <h3 className="text-xl font-semibold mb-4">{translations[language].available}</h3>
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
             {TIME_SLOTS.map((slot) => (
               <button
                 key={slot}
@@ -84,28 +81,6 @@ const TimeSlotPicker = () => {
               </button>
             ))}
           </div>
-        </div>
-      </div>
-      
-      <div className="mt-8">
-        <h3 className="text-xl font-semibold mb-4">{translations[language].connectWithUs}</h3>
-        <div className="flex space-x-4">
-          <a 
-            href="https://facebook.com/faieyelashes" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-purple-500 hover:text-purple-600 transition-colors"
-          >
-            <Facebook size={24} />
-          </a>
-          <a 
-            href="https://x.com/faieyelashes" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-purple-500 hover:text-purple-600 transition-colors"
-          >
-            <X size={24} />
-          </a>
         </div>
       </div>
     </div>
