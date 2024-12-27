@@ -35,7 +35,7 @@ const Services = () => {
         },
         {
           title: "Lash Removal",
-          description: "Professional and safe removal of eyelash extensions",
+          description: "Professional and safe removal of old eyelash extensions",
           price: "฿ 150"
         }
       ]
