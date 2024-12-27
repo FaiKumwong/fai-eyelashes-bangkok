@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Facebook, Twitter } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import MobileMenu from './Navigation/MobileMenu';
 import DesktopMenu from './Navigation/DesktopMenu';
@@ -44,27 +44,18 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: 'url(/lovable-uploads/927a4887-df5b-4756-a1a7-e149f2441776.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          height: '80px'
-        }}
-      />
-      <div className="container mx-auto px-6 py-4 relative">
+      <div className="container mx-auto px-4 sm:px-6 py-4 relative">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-4">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-4">
             <img 
               src="/lovable-uploads/34bdfa6c-b7c6-43e5-a5a6-11d644d950c0.png" 
               alt="Fai Eyelashes Logo" 
-              className="h-12 w-auto object-contain"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
             />
             <img 
               src="/lovable-uploads/b51289dd-7745-4393-8f51-c20b75f76b59.png" 
               alt="Fai Eyelashes Text" 
-              className="h-12 w-auto object-contain"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
             />
           </Link>
 
@@ -84,7 +75,7 @@ const Navigation = () => {
 
           <button 
             onClick={() => scrollToSection('booking')}
-            className="bg-gradient-to-r from-pink-300 to-pink-200 text-pink-500 px-6 py-2 rounded-full hover:from-pink-400 hover:to-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold"
+            className="hidden sm:block bg-gradient-to-r from-pink-300 to-pink-200 text-pink-500 px-4 sm:px-6 py-2 rounded-full hover:from-pink-400 hover:to-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm sm:text-base"
           >
             {translations[language].bookNow}
           </button>
