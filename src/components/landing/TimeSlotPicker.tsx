@@ -4,6 +4,13 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { format } from 'date-fns';
 import { th } from 'date-fns/locale';
 import { Facebook, Twitter } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const TIME_SLOTS = [
   '08:00-10:00',
@@ -35,6 +42,9 @@ const TimeSlotPicker = () => {
     }
   };
 
+  console.log('Current date selected:', date);
+  console.log('Current time slot selected:', selectedSlot);
+
   return (
     <div className="space-y-8">
       <div className="grid md:grid-cols-2 gap-8">
@@ -56,8 +66,8 @@ const TimeSlotPicker = () => {
                 nav_button_previous: "absolute left-1",
                 nav_button_next: "absolute right-1",
                 table: "w-full border-collapse space-y-1",
-                head_row: "flex",
-                row: "flex w-full mt-2",
+                head_row: "flex justify-between mb-2",
+                row: "flex w-full mt-2 justify-between",
                 cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 h-9 w-9",
                 months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0"
               }}
