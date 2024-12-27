@@ -31,12 +31,12 @@ const Services = () => {
         {
           title: "Colored Lashes",
           description: "Add a pop of color to your lash extensions for a unique style",
-          price: "฿ 999"
+          price: "฿ 1199"
         },
         {
           title: "Lash Removal",
           description: "Professional and safe removal of eyelash extensions",
-          price: "฿ 299"
+          price: "฿ 150"
         }
       ]
     },
@@ -66,12 +66,12 @@ const Services = () => {
         {
           title: "ขนตาสี",
           description: "เพิ่มสีสันให้กับขนตาต่อของคุณเพื่อสไตล์ที่เป็นเอกลักษณ์",
-          price: "฿ 999"
+          price: "฿ 1199"
         },
         {
           title: "ถอดขนตา",
           description: "บริการถอดขนตาต่ออย่างมืออาชีพและปลอดภัย",
-          price: "฿ 299"
+          price: "฿ 150"
         }
       ]
     }
