@@ -5,7 +5,7 @@ const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
   
   return (
-    <div className="flex items-center space-x-4 mr-4">
+    <div className="flex flex-col items-center space-y-4 mr-4">
       <button
         onClick={() => setLanguage('en')}
         className={`flex items-center space-x-1 transition-all duration-300 ${
