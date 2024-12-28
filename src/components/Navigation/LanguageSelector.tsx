@@ -15,7 +15,7 @@ const LanguageSelector = () => {
       <button
         onClick={() => setLanguage('en')}
         className={`flex items-center justify-center transition-all duration-300 ${
-          language === 'en' ? 'scale-105' : 'opacity-70'
+          language === 'en' ? 'scale-150' : 'opacity-95'
         }`}
         style={{
           width: '32px',
