@@ -18,6 +18,8 @@ const TimeSlotPicker = () => {
     }
   };
 
+  console.log('TimeSlotPicker rendered with language:', language);
+
   return (
     <div className="space-y-8 max-w-4xl mx-auto bg-gradient-to-r from-pink-100 to-pink-200 p-6 rounded-lg shadow-lg">
       <h3 className="text-xl font-semibold mb-4">{translations[language].selectDate}</h3>
@@ -29,6 +31,7 @@ const TimeSlotPicker = () => {
           weekStartOn: 1,
           startHour: 8,
           endHour: 20,
+          step: 60
         }}
         day={{
           startHour: 8,
@@ -37,28 +40,29 @@ const TimeSlotPicker = () => {
         }}
         selectedDate={new Date()}
         fields={[]}
-        customViewer={(event) => {
-          return <div>{event.title}</div>;
-        }}
         translations={{
           navigation: {
             month: language === 'th' ? 'เดือน' : 'Month',
             week: language === 'th' ? 'สัปดาห์' : 'Week',
             day: language === 'th' ? 'วัน' : 'Day',
             today: language === 'th' ? 'วันนี้' : 'Today',
+            agenda: language === 'th' ? 'ตารางเวลา' : 'Agenda'
           }
+        }}
+        customViewer={(event) => {
+          return <div>{event.title}</div>;
         }}
         styles={{
           cell: {
-            backgroundColor: 'transparent',
+            backgroundColor: 'transparent'
           },
           selectedCell: {
             background: 'linear-gradient(to right, #9333ea, #7e22ce)',
-            color: 'white',
+            color: 'white'
           },
           hover: {
             background: 'linear-gradient(to right, #9333ea, #7e22ce)',
-            color: 'white',
+            color: 'white'
           }
         }}
       />

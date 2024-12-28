@@ -46,11 +46,19 @@ const Navigation = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    navigate('/');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
       <div className="container mx-auto px-4 sm:px-6 py-4 relative">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
+          <div 
+            onClick={handleLogoClick}
+            className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 cursor-pointer"
+          >
             <img 
               src="/lovable-uploads/34bdfa6c-b7c6-43e5-a5a6-11d644d950c0.png" 
               alt="Fai Eyelashes Logo" 
@@ -61,7 +69,7 @@ const Navigation = () => {
               alt="Fai Eyelashes Text" 
               className="h-8 sm:h-10 md:h-12 w-auto object-contain hidden sm:block"
             />
-          </Link>
+          </div>
 
           <div className="flex items-center md:hidden">
             <button
