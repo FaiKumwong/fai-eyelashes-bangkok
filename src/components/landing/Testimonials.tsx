@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Testimonials = () => {
-  const [language, setLanguage] = useState('en');
+  const { language } = useLanguage();
 
   const translations = {
     en: {

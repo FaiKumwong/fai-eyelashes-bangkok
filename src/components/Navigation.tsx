@@ -11,7 +11,7 @@ const Navigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  console.log('Navigation rendered, current language:', language); // Debug log
+  console.log('Navigation rendered, current language:', language);
 
   const translations = {
     en: {
@@ -50,7 +50,7 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
       <div className="container mx-auto px-4 sm:px-6 py-4 relative">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center space-x-2 sm:space-x-4">
+          <Link to="/" className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
             <img 
               src="/lovable-uploads/34bdfa6c-b7c6-43e5-a5a6-11d644d950c0.png" 
               alt="Fai Eyelashes Logo" 
@@ -59,7 +59,7 @@ const Navigation = () => {
             <img 
               src="/lovable-uploads/b51289dd-7745-4393-8f51-c20b75f76b59.png" 
               alt="Fai Eyelashes Text" 
-              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain hidden sm:block"
             />
           </Link>
 
@@ -79,7 +79,7 @@ const Navigation = () => {
 
           <button 
             onClick={() => scrollToSection('booking')}
-            className="hidden sm:block bg-gradient-to-r from-pink-300 to-pink-200 text-pink-500 px-4 sm:px-6 py-2 rounded-full hover:from-pink-400 hover:to-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm sm:text-base"
+            className="hidden lg:block bg-gradient-to-r from-pink-300 to-pink-200 text-pink-500 px-4 sm:px-6 py-2 rounded-full hover:from-pink-400 hover:to-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm sm:text-base whitespace-nowrap"
           >
             {translations[language].bookNow}
           </button>

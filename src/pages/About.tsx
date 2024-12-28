@@ -4,7 +4,7 @@ import { Metadata } from '@/components/Metadata';
 
 const About = () => {
   const { language } = useLanguage();
-  console.log('About page rendered, language:', language); // Debug log
+  console.log('About page rendered, language:', language);
 
   const translations = {
     en: {
@@ -31,20 +31,22 @@ const About = () => {
         title={translations[language].title}
         description={translations[language].description}
       />
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-          {translations[language].intro}
-        </h1>
-        <div className="space-y-6 text-gray-700">
-          <p className="text-lg leading-relaxed">
-            {translations[language].story}
-          </p>
-          <p className="text-lg leading-relaxed">
-            {translations[language].mission}
-          </p>
-          <p className="text-lg leading-relaxed">
-            {translations[language].expertise}
-          </p>
+      <div className="container mx-auto px-4 max-w-4xl flex justify-center items-center min-h-[calc(100vh-6rem)]">
+        <div className="w-full max-w-3xl">
+          <h1 className="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            {translations[language].intro}
+          </h1>
+          <div className="space-y-6 text-gray-700">
+            <p className="text-lg leading-relaxed">
+              {translations[language].story}
+            </p>
+            <p className="text-lg leading-relaxed">
+              {translations[language].mission}
+            </p>
+            <p className="text-lg leading-relaxed">
+              {translations[language].expertise}
+            </p>
+          </div>
         </div>
       </div>
     </div>
