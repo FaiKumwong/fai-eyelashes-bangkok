@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Facebook, Twitter } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import MobileMenu from './Navigation/MobileMenu';
 import DesktopMenu from './Navigation/DesktopMenu';
@@ -18,7 +18,8 @@ const Navigation = () => {
       testimonials: 'Testimonials',
       contact: 'Contact',
       bookNow: 'Book Now',
-      blog: 'Blog'
+      blog: 'Blog',
+      about: 'About Me'
     },
     th: {
       services: 'บริการ',
@@ -26,7 +27,8 @@ const Navigation = () => {
       testimonials: 'รีวิว',
       contact: 'ติดต่อ',
       bookNow: 'จองตอนนี้',
-      blog: 'บล็อก'
+      blog: 'บล็อก',
+      about: 'เกี่ยวกับฉัน'
     }
   };
 

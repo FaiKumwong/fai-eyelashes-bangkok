@@ -32,9 +32,6 @@ const TimeSlotPicker = () => {
     }
   };
 
-  console.log('Current date selected:', date);
-  console.log('Current time slot selected:', selectedSlot);
-
   return (
     <div className="space-y-8 max-w-4xl mx-auto">
       <div className="grid md:grid-cols-2 gap-8">
@@ -48,8 +45,8 @@ const TimeSlotPicker = () => {
               locale={language === 'th' ? th : undefined}
               className="mx-auto bg-transparent"
               classNames={{
-                day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:bg-purple-600 hover:text-white font-bold",
-                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500/20 hover:to-purple-400/20 rounded-full transition-all duration-200",
+                day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:from-purple-600 hover:to-purple-500 font-bold",
+                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-full transition-all duration-200",
                 head_cell: "text-purple-600 font-bold text-sm uppercase tracking-wide",
                 nav_button: "text-purple-600 hover:bg-purple-100 rounded-full transition-colors p-1",
                 caption: "text-purple-800 font-bold text-lg capitalize flex justify-center space-x-1 mb-4",

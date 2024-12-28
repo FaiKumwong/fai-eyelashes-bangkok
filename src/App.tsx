@@ -7,6 +7,7 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
+import About from "./pages/About";
 import Navigation from "./components/Navigation";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/gallery" element={<Gallery />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </BrowserRouter>
       </LanguageProvider>
