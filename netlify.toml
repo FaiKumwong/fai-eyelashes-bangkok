@@ -1,2 +1,7 @@
 [[plugins]]
 package = "@netlify/plugin-sitemap"
+
+  [plugins.inputs]
+  exclude = ["/exclude-page"]
+  baseUrl = "https://faieyelashes.com"
+  filePath = "sitemap.xml"  # Point directly to the root sitemap.xml
