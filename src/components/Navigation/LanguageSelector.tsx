@@ -8,13 +8,13 @@ const LanguageSelector = () => {
     <div className="flex flex-col items-center space-y-2 mr-4">
       <button
         onClick={() => setLanguage('en')}
-        className={`transition-all duration-300 ${
+        className={`relative flex items-center justify-center w-8 h-8 transition-all duration-300 ${
           language === 'en' 
             ? 'text-white scale-105' 
-            : 'text-white/50 opacity-50 blur-[0.3px] hover:opacity-70'
+            : 'text-white/50 hover:opacity-70'
         }`}
       >
-        <div className="w-8 h-8 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <svg className="w-6 h-4" viewBox="0 0 60 30">
             <clipPath id="t">
               <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/>
@@ -29,13 +29,13 @@ const LanguageSelector = () => {
       </button>
       <button
         onClick={() => setLanguage('th')}
-        className={`transition-all duration-300 ${
+        className={`relative flex items-center justify-center w-8 h-8 transition-all duration-300 ${
           language === 'th' 
             ? 'text-white scale-105' 
-            : 'text-white/50 opacity-50 blur-[0.3px] hover:opacity-70'
+            : 'text-white/50 hover:opacity-70'
         }`}
       >
-        <div className="w-8 h-8 flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <svg className="w-6 h-4" viewBox="0 0 900 600">
             <rect fill="#ED1C24" width="900" height="600"/>
             <rect fill="#fff" y="100" width="900" height="400"/>
