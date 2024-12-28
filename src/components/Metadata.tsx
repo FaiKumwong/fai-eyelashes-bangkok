@@ -20,39 +20,30 @@ export const Metadata: React.FC<MetadataProps> = ({
     "description": description,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Your Street Address",
+      "streetAddress": "Sukhumvit Soi 50, On Nut",
       "addressLocality": "Bangkok",
       "addressRegion": "Bangkok",
-      "postalCode": "10110",
+      "postalCode": "10260",
       "addressCountry": "TH"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "YOUR_LATITUDE",
-      "longitude": "YOUR_LONGITUDE"
+      "latitude": "13.707137",
+      "longitude": "100.593760"
     },
     "url": "https://faieyelashes.com",
-    "telephone": "+66XXXXXXXXX",
-    "priceRange": "฿฿",
+    "telephone": "+66-627-766-926",
+    "priceRange": " ฿ 799 - ฿ 999",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         "opens": "08:00",
         "closes": "20:00"
       },
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Saturday",
-          "Sunday"
-        ],
+        "dayOfWeek": ["Saturday"],
         "opens": "09:00",
         "closes": "21:00"
       }
@@ -64,19 +55,18 @@ export const Metadata: React.FC<MetadataProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       
-      {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      
-      {/* Twitter */}
+
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      
-      {/* Structured Data */}
+
+      <link rel="canonical" href={window.location.href} />
+
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
