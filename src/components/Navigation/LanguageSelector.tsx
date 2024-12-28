@@ -41,6 +41,7 @@ const LanguageSelector = () => {
         style={{
           width: '32px',
           height: '32px',
+          margin: 2px 0;
         }}
       >
         <svg className="w-6 h-4" viewBox="0 0 900 600">
