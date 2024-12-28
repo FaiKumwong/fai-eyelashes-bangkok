@@ -21,7 +21,7 @@ const Navigation = () => {
       contact: 'Contact',
       bookNow: 'Book Now',
       blog: 'Blog',
-      about: 'About Me'
+      about: 'About'
     },
     th: {
       services: 'บริการ',
