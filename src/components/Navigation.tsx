@@ -11,6 +11,8 @@ const Navigation = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  console.log('Navigation rendered, current language:', language); // Debug log
+
   const translations = {
     en: {
       services: 'Services',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 interface TranslationType {
   services: string;
@@ -9,6 +8,7 @@ interface TranslationType {
   testimonials: string;
   contact: string;
   blog: string;
+  about: string;
 }
 
 interface DesktopMenuProps {
@@ -17,6 +17,8 @@ interface DesktopMenuProps {
 }
 
 const DesktopMenu = ({ translations, scrollToSection }: DesktopMenuProps) => {
+  console.log('DesktopMenu rendered with translations:', translations); // Debug log
+
   return (
     <div className="hidden md:flex items-center space-x-8">
       <LanguageSelector />
@@ -49,6 +51,12 @@ const DesktopMenu = ({ translations, scrollToSection }: DesktopMenuProps) => {
         className="text-white hover:text-white/80"
       >
         {translations.blog}
+      </Link>
+      <Link 
+        to="/about" 
+        className="text-white hover:text-white/80"
+      >
+        {translations.about}
       </Link>
     </div>
   );

@@ -4,6 +4,7 @@ import { Metadata } from '@/components/Metadata';
 
 const About = () => {
   const { language } = useLanguage();
+  console.log('About page rendered, language:', language); // Debug log
 
   const translations = {
     en: {
@@ -25,7 +26,7 @@ const About = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white py-20">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-white pt-24">
       <Metadata 
         title={translations[language].title}
         description={translations[language].description}

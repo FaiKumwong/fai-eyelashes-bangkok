@@ -8,6 +8,7 @@ interface TranslationType {
   testimonials: string;
   contact: string;
   blog: string;
+  about: string;
 }
 
 interface MobileMenuProps {
@@ -17,6 +18,8 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) => {
+  console.log('MobileMenu rendered, isOpen:', isOpen); // Debug log
+
   if (!isOpen) return null;
 
   return (
@@ -52,6 +55,12 @@ const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.blog}
+        </Link>
+        <Link 
+          to="/about" 
+          className="text-white hover:text-white/80 text-center w-full"
+        >
+          {translations.about}
         </Link>
       </div>
     </div>
