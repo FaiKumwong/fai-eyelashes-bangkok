@@ -15,7 +15,7 @@ const LanguageSelector = () => {
       <button
         onClick={() => setLanguage('en')}
         className={`flex items-center justify-center transition-all duration-300 ${
-          language === 'en' ? 'scale-115' : 'opacity-50'
+          language === 'en' ? 'scale-125' : 'opacity-35'
         }`}
         style={{
           width: '32px',
@@ -37,7 +37,7 @@ const LanguageSelector = () => {
       <button
         onClick={() => setLanguage('th')}
         className={`flex items-center justify-center transition-all duration-300 ${
-          language === 'th' ? 'scale-115' : 'opacity-50'
+          language === 'th' ? 'scale-125' : 'opacity-35'
         }`}
         style={{
           width: '32px',
