@@ -11,6 +11,12 @@ const BlogList = () => {
           Are you ready to elevate your lash game in 2025? Beauty trends are popping up everywhere, but let's talk about lashes! From bold colors to natural enhancements, these lash trends are set to turn heads. Keep reading to find the perfect style to match your vibe this year!
         </p>
 
+        <img 
+          src="/lovable-uploads/5888750b-e0ff-46a9-96cf-38164590bf32.png"
+          alt="Fai Eyelash 2025"
+          className="w-full rounded-lg mb-8 shadow-lg"
+        />
+
         <h4 className="text-xl font-bold mb-4 text-purple-700">Lash Trends to Watch in 2025</h4>
 
         <div className="mb-6">
@@ -28,6 +34,12 @@ const BlogList = () => {
           <p className="text-gray-700 mb-4">
             Looking for something different? Just ask! We can order custom colors to match your unique style.
           </p>
+          
+          <img 
+            src="/lovable-uploads/82ef9e66-9169-47df-ab5f-b1ee8787b361.png"
+            alt="Colorful Eyelashes"
+            className="w-full rounded-lg mb-8 shadow-lg"
+          />
         </div>
 
         <div className="mb-6">
@@ -40,9 +52,15 @@ const BlogList = () => {
 
         <div className="mb-6">
           <h5 className="text-lg font-semibold mb-2">Wet Look Lashes</h5>
-          <p className="text-gray-700">
+          <p className="text-gray-700 mb-4">
             Love a fresh, dewy finish? Wet-look lash extensions are making waves and are here to stay in 2025. This trend gives your lashes a just out of the water shine that looks youthful and voluminous. It's perfect for those who adore full, fluttery lashes.
           </p>
+          
+          <img 
+            src="/lovable-uploads/cc79287d-d766-4d0e-bf0f-65c5b15e5d7a.png"
+            alt="Wet Look Eyelashes"
+            className="w-full rounded-lg mb-8 shadow-lg"
+          />
         </div>
 
         <div className="mb-6">
