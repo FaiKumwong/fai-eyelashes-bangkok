@@ -4,24 +4,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const LanguageSelector = () => {
   const { language, setLanguage } = useLanguage();
 
+  console.log('LanguageSelector rendered, current language:', language);
+
   return (
-    <div
-      className="flex flex-col items-center"
-      style={{
-        gap: '4px', // Half the original spacing (2px or 4px based on your needs)
-        width: '40px', // Explicit width to prevent overrides
-      }}
-    >
+    <div className="flex flex-col items-center space-y-2 fixed-width">
       <button
         onClick={() => setLanguage('en')}
-        className={`flex items-center justify-center transition-all duration-300 ${
+        className={`w-8 h-8 flex items-center justify-center transition-all duration-300 ${
           language === 'en' ? 'scale-125' : 'opacity-35'
         }`}
-        style={{
-          width: '32px',
-          height: '32px',
-          margin: '2px 0',
-        }}
       >
         <svg className="w-6 h-4" viewBox="0 0 60 30">
           <clipPath id="t">
@@ -36,14 +27,9 @@ const LanguageSelector = () => {
       </button>
       <button
         onClick={() => setLanguage('th')}
-        className={`flex items-center justify-center transition-all duration-300 ${
+        className={`w-8 h-8 flex items-center justify-center transition-all duration-300 ${
           language === 'th' ? 'scale-125' : 'opacity-35'
         }`}
-        style={{
-          width: '32px',
-          height: '32px',
-          margin: '2px 0',
-        }}
       >
         <svg className="w-6 h-4" viewBox="0 0 900 600">
           <rect fill="#ED1C24" width="900" height="600" />

@@ -34,18 +34,6 @@ const Navigation = () => {
     }
   };
 
-  const scrollToSection = (id: string) => {
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: id } });
-    } else {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        setIsMenuOpen(false);
-      }
-    }
-  };
-
   const handleLogoClick = () => {
     navigate('/');
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -53,21 +41,21 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
-      <div className="container mx-auto px-4 sm:px-6 py-4 relative">
+      <div className="container mx-auto px-4 sm:px-6 py-4">
         <div className="flex items-center justify-between">
           <div 
             onClick={handleLogoClick}
-            className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0 cursor-pointer"
+            className="flex items-center space-x-2 cursor-pointer"
           >
             <img 
               src="/lovable-uploads/34bdfa6c-b7c6-43e5-a5a6-11d644d950c0.png" 
               alt="Fai Eyelashes Logo" 
-              className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+              className="h-8 sm:h-10 md:h-12 w-auto"
             />
             <img 
               src="/lovable-uploads/b51289dd-7745-4393-8f51-c20b75f76b59.png" 
               alt="Fai Eyelashes Text" 
-              className="h-8 sm:h-10 md:h-12 w-auto object-contain hidden sm:block"
+              className="h-8 sm:h-10 md:h-12 w-auto block"
             />
           </div>
 
@@ -84,19 +72,13 @@ const Navigation = () => {
             translations={translations[language]} 
             scrollToSection={scrollToSection} 
           />
-
-          <button 
-            onClick={() => scrollToSection('booking')}
-            className="hidden lg:block bg-gradient-to-r from-pink-300 to-pink-200 text-pink-500 px-4 sm:px-6 py-2 rounded-full hover:from-pink-400 hover:to-pink-300 transition-all duration-300 shadow-lg hover:shadow-xl font-semibold text-sm sm:text-base whitespace-nowrap"
-          >
-            {translations[language].bookNow}
-          </button>
         </div>
 
         <MobileMenu 
           isOpen={isMenuOpen}
           translations={translations[language]}
           scrollToSection={scrollToSection}
+          setIsMenuOpen={setIsMenuOpen}
         />
       </div>
     </nav>
