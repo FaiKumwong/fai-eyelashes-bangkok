@@ -72,7 +72,7 @@ const Gallery = () => {
                 <img
                   src="/IGpics/Waterlogo.png"
                   alt="Watermark"
-                  className="opacity-20 w-1/3 h-1/3 object-contain"
+                  className="opacity-25 w-2/3 h-2/3 object-contain"
                 />
               </div>
             </div>
