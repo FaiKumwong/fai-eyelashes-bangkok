@@ -7,14 +7,14 @@ const LanguageSelector = () => {
   console.log('LanguageSelector rendered, current language:', language);
 
   return (
-    <div className="flex flex-col items-center space-y-2 fixed-width">
+    <div className="flex items-center space-x-2">
       <button
         onClick={() => setLanguage('en')}
-        className={`w-8 h-8 flex items-center justify-center transition-all duration-300 ${
-          language === 'en' ? 'scale-125' : 'opacity-35'
+        className={`w-6 h-6 flex items-center justify-center transition-all duration-300 ${
+          language === 'en' ? 'scale-110' : 'opacity-35'
         }`}
       >
-        <svg className="w-6 h-4" viewBox="0 0 60 30">
+        <svg className="w-5 h-4" viewBox="0 0 60 30">
           <clipPath id="t">
             <path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z" />
           </clipPath>
@@ -27,11 +27,11 @@ const LanguageSelector = () => {
       </button>
       <button
         onClick={() => setLanguage('th')}
-        className={`w-8 h-8 flex items-center justify-center transition-all duration-300 ${
-          language === 'th' ? 'scale-125' : 'opacity-35'
+        className={`w-6 h-6 flex items-center justify-center transition-all duration-300 ${
+          language === 'th' ? 'scale-110' : 'opacity-35'
         }`}
       >
-        <svg className="w-6 h-4" viewBox="0 0 900 600">
+        <svg className="w-5 h-4" viewBox="0 0 900 600">
           <rect fill="#ED1C24" width="900" height="600" />
           <rect fill="#fff" y="100" width="900" height="400" />
           <rect fill="#241D4F" y="200" width="900" height="200" />
