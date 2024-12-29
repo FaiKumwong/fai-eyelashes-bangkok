@@ -57,18 +57,22 @@ const Gallery = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {images.map((image, index) => (
-            <div key={index} className="aspect-square overflow-hidden rounded-lg shadow-lg">
+            <div 
+              key={index} 
+              className="aspect-square overflow-hidden rounded-lg shadow-lg relative group"
+            >
+              {/* Display the main image */}
               <img
                 src={image}
                 alt={`Gallery image ${index + 1}`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                className="w-full h-full object-cover"
               />
-              {/* Logo Watermark */}
+              {/* Watermark overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
                   src="/IGpics/Waterlogo.png"
-                  alt="Watermark logo"
-                  className="opacity-20 w-1/2 h-1/2 object-contain"
+                  alt="Watermark"
+                  className="opacity-20 w-1/3 h-1/3 object-contain"
                 />
               </div>
             </div>
