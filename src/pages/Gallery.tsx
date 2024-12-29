@@ -63,6 +63,23 @@ const Gallery = () => {
                 alt={`Gallery image ${index + 1}`}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
+              {/* Logo Watermark */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <img
+                  src="/IGpics/Waterlogo.png"
+                  alt="Watermark logo"
+                  className="opacity-20 w-1/2 h-1/2 object-contain"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Gallery;
             </div>
           ))}
         </div>
