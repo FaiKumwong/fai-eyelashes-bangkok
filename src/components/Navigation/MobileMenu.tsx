@@ -14,11 +14,12 @@ interface TranslationType {
 interface MobileMenuProps {
   isOpen: boolean;
   translations: TranslationType;
-  scrollToSection: (id: string) => void;
+  onNavigate: (path: string) => void;
+  setIsMenuOpen: (isOpen: boolean) => void;
 }
 
-const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) => {
-  console.log('MobileMenu rendered, isOpen:', isOpen); // Debug log
+const MobileMenu = ({ isOpen, translations, onNavigate, setIsMenuOpen }: MobileMenuProps) => {
+  console.log('MobileMenu rendered, isOpen:', isOpen);
 
   if (!isOpen) return null;
 
@@ -27,7 +28,7 @@ const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) 
       <div className="flex flex-col items-center space-y-4 px-6">
         <LanguageSelector />
         <button 
-          onClick={() => scrollToSection('services')} 
+          onClick={() => onNavigate('/services')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.services}
@@ -39,13 +40,13 @@ const MobileMenu = ({ isOpen, translations, scrollToSection }: MobileMenuProps) 
           {translations.gallery}
         </Link>
         <button 
-          onClick={() => scrollToSection('testimonials')} 
+          onClick={() => onNavigate('/testimonials')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.testimonials}
         </button>
         <button 
-          onClick={() => scrollToSection('contact')} 
+          onClick={() => onNavigate('/contact')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.contact}

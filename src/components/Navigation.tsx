@@ -39,6 +39,11 @@ const Navigation = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-gradient-to-r from-pink-500 to-purple-500">
       <div className="container mx-auto px-4 sm:px-6 py-4">
@@ -70,14 +75,14 @@ const Navigation = () => {
 
           <DesktopMenu 
             translations={translations[language]} 
-            scrollToSection={scrollToSection} 
+            onNavigate={handleNavigation}
           />
         </div>
 
         <MobileMenu 
           isOpen={isMenuOpen}
           translations={translations[language]}
-          scrollToSection={scrollToSection}
+          onNavigate={handleNavigation}
           setIsMenuOpen={setIsMenuOpen}
         />
       </div>

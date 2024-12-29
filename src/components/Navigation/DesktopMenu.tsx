@@ -13,17 +13,17 @@ interface TranslationType {
 
 interface DesktopMenuProps {
   translations: TranslationType;
-  scrollToSection: (id: string) => void;
+  onNavigate: (path: string) => void;
 }
 
-const DesktopMenu = ({ translations, scrollToSection }: DesktopMenuProps) => {
-  console.log('DesktopMenu rendered with translations:', translations); // Debug log
+const DesktopMenu = ({ translations, onNavigate }: DesktopMenuProps) => {
+  console.log('DesktopMenu rendered with translations:', translations);
 
   return (
     <div className="hidden md:flex items-center space-x-8">
       <LanguageSelector />
       <button 
-        onClick={() => scrollToSection('services')} 
+        onClick={() => onNavigate('/services')} 
         className="text-white hover:text-white/80"
       >
         {translations.services}
@@ -35,13 +35,13 @@ const DesktopMenu = ({ translations, scrollToSection }: DesktopMenuProps) => {
         {translations.gallery}
       </Link>
       <button 
-        onClick={() => scrollToSection('testimonials')} 
+        onClick={() => onNavigate('/testimonials')} 
         className="text-white hover:text-white/80"
       >
         {translations.testimonials}
       </button>
       <button 
-        onClick={() => scrollToSection('contact')} 
+        onClick={() => onNavigate('/contact')} 
         className="text-white hover:text-white/80"
       >
         {translations.contact}
