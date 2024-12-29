@@ -10,7 +10,7 @@ const LanguageSelector = () => {
     <div className="flex flex-col items-center space-y-2">
       <button
         onClick={() => setLanguage('en')}
-        className={`w-6 h-6 flex items-center justify-center transition-all duration-300 ${
+        className={`w-6 h-6 flex items-center justify-end transition-all duration-300 ${
           language === 'en' ? 'scale-125' : 'opacity-35'
         }`}
       >
@@ -27,7 +27,7 @@ const LanguageSelector = () => {
       </button>
       <button
         onClick={() => setLanguage('th')}
-        className={`w-6 h-6 flex items-center justify-center transition-all duration-300 ${
+        className={`w-6 h-6 flex items-center justify-start transition-all duration-300 ${
           language === 'th' ? 'scale-125' : 'opacity-35'
         }`}
       >
