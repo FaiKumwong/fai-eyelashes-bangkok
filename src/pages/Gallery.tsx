@@ -5,7 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 const Gallery = () => {
   const { language } = useLanguage();
   const images = [
-    "/lovable-uploads/190b47c4-6ba6-4557-8773-f6c519e3cd31.png",
+    "/IGpics/IG 001.png",
     "/lovable-uploads/3db74b41-0201-4f73-bfa6-4c2f183ce923.png",
     "/lovable-uploads/b512175b-f441-4177-9048-5a330e3ad2ae.png",
     "/lovable-uploads/d8939ed6-b0f2-4c3e-99ff-eeeb6044605c.png",
