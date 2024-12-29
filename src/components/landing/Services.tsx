@@ -29,7 +29,7 @@ const Services = () => {
           price: "฿ 999"
         },
         {
-          title: "Colored Lashes",
+          title: "Color Lashes",
           description: "Add a pop of color to your lash extensions for a unique style",
           price: "฿ 1199"
         },
