@@ -26,11 +26,18 @@ const NotFound = () => {
         description={translations[language].description}
       />
       <div className="container mx-auto px-4 flex flex-col items-center justify-center min-h-[calc(100vh-6rem)]">
-        <img 
-          src="/lovable-uploads/34bdfa6c-b7c6-43e5-a5a6-11d644d950c0.png"
-          alt="Fai Eyelashes Logo"
-          className="w-32 h-32 mb-8"
-        />
+        <div className="flex items-center mb-8">
+          <img 
+            src="/lovable-uploads/34bdfa6c-b7c6-43e5-a5a6-11d644d950c0.png"
+            alt="Fai Eyelashes Logo"
+            className="h-16 w-auto"
+          />
+          <img 
+            src="/lovable-uploads/b51289dd-7745-4393-8f51-c20b75f76b59.png"
+            alt="Fai Eyelashes Text"
+            className="h-16 w-auto ml-2"
+          />
+        </div>
         <h1 className="text-4xl font-bold text-center mb-4 bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
           404 - {translations[language].title}
         </h1>

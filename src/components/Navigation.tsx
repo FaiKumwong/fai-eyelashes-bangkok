@@ -39,8 +39,15 @@ const Navigation = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const handleNavigation = (path: string) => {
-    navigate(path);
+  const scrollToSection = (sectionId: string) => {
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
     setIsMenuOpen(false);
   };
 
@@ -75,14 +82,14 @@ const Navigation = () => {
 
           <DesktopMenu 
             translations={translations[language]} 
-            onNavigate={handleNavigation}
+            onNavigate={scrollToSection}
           />
         </div>
 
         <MobileMenu 
           isOpen={isMenuOpen}
           translations={translations[language]}
-          onNavigate={handleNavigation}
+          onNavigate={scrollToSection}
           setIsMenuOpen={setIsMenuOpen}
         />
       </div>

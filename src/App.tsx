@@ -8,10 +8,6 @@ import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import Gallery from "./pages/Gallery";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import Testimonials from "./pages/Testimonials";
-import Contact from "./pages/Contact";
-import BookNow from "./pages/BookNow";
 import NotFound from "./pages/NotFound";
 import Navigation from "./components/Navigation";
 
@@ -33,10 +29,6 @@ const App = () => {
               <Route path="/blog" element={<Blog />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/testimonials" element={<Testimonials />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/book-now" element={<BookNow />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

@@ -33,7 +33,7 @@ const Gallery = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50 pt-24">
+    <div className="min-h-screen bg-gradient-to-b from-pink-50 to-purple-50 pt-32">
       <Metadata 
         title="Fai Eyelashes Gallery - Our Work"
         description="View our portfolio of beautiful eyelash extensions at Fai Eyelashes Bangkok."
