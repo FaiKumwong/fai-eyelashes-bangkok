@@ -47,7 +47,16 @@ const About = () => {
               {translations[language].expertise}
             </p>
           </div>
-        </div>
+
+          {/* Logo Section */}
+          <div className="flex justify-center mt-8">
+            <img 
+              src="/public/lovable-uploads/About_logo.jpg" 
+              alt="Fai Eyelashes Logo" 
+              className="w-[300px] h-auto rounded-full" 
+            />
+            </div>
+          </div>
       </div>
     </div>
   );
