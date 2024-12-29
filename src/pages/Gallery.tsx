@@ -80,12 +80,3 @@ const Gallery = () => {
 };
 
 export default Gallery;
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Gallery;
