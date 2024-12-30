@@ -20,9 +20,9 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
-          <Toaster />
-          <Sonner />
           <BrowserRouter>
+            <Toaster />
+            <Sonner />
             <Navigation />
             <Routes>
               <Route path="/" element={<Index />} />
@@ -30,7 +30,7 @@ const App = () => {
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/about" element={<About />} />
               <Route path="/404" element={<NotFound />} />
-              <Route path="*" element={<Navigate to="/404" replace />} />
+              <Route path="*" element={<Navigate to="/404" />} />
             </Routes>
           </BrowserRouter>
         </LanguageProvider>
