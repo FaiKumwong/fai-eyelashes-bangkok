@@ -10,33 +10,33 @@ const Testimonials = () => {
       title: "Client Love",
       testimonials: [
         {
-          name: "Sarah Johnson",
+          name: "Sarah",
           rating: 5,
-          comment: "Absolutely love my new lashes! The service was professional and the results are stunning.",
-          date: "March 2024"
+          comment: "Absolutely love my new lashes! The service was professional and the results are stunning as usually.",
+          date: "October 2024"
         },
         {
-          name: "Emily Davis",
+          name: "Kung",
           rating: 5,
-          comment: "Best lash artist in town! Natural looking and long-lasting results.",
-          date: "March 2024"
+          comment: "Best lash artist in Bangkok! Natural looking and long lasting results, thx Fai.",
+          date: "October 2024"
         },
         {
           name: "Michelle Lee",
           rating: 4,
           comment: "Great experience and beautiful results. Will definitely come back!",
-          date: "February 2024"
+          date: "September 2024"
         },
         {
           name: "Jessica Chen",
           rating: 5,
-          comment: "Love the natural look of my new lashes. Perfect for everyday wear!",
+          comment: "Love the natural look of my new lashes. Perfect for everyday wear, above my expectation!",
           date: "November 2024"
         },
         {
-          name: "Amanda Wilson",
+          name: "Amanda UK",
           rating: 5,
-          comment: "The attention to detail is amazing. My lashes look perfect!",
+          comment: "The attention to detail is amazing. My lashes look perfect thanks to Fai!",
           date: "November 2024"
         },
         {
@@ -46,19 +46,19 @@ const Testimonials = () => {
           date: "December 2024"
         },
         {
-          name: "Sophie Taylor",
+          name: "P' Ning",
           rating: 5,
-          comment: "The best lash extensions I've ever had. So natural and comfortable.",
+          comment: "The best lash extensions I've ever had. So natural and comfortable, see my picture in Fai's Gallery.",
           date: "December 2024"
         },
         {
-          name: "Lauren Martinez",
+          name: "Laura",
           rating: 5,
-          comment: "Incredible attention to detail. My lashes look amazing!",
+          comment: "Incredible attention to detail. My lashes look amazing! Before travelling back home, thanks Fai",
           date: "December 2024"
         },
         {
-          name: "Emma Thompson",
+          name: "Emma",
           rating: 5,
           comment: "Perfect lashes every time. Wouldn't go anywhere else!",
           date: "December 2024"
