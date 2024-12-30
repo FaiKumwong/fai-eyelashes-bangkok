@@ -20,7 +20,7 @@ const DesktopMenu = ({ translations, onNavigate }: DesktopMenuProps) => {
   console.log('DesktopMenu rendered with translations:', translations);
 
   return (
-    <div className="hidden md:flex items-center space-x-6">
+    <div className="hidden md:flex flex-1 justify-center">
       <div className="flex items-center space-x-6">
         <LanguageSelector />
         <button 

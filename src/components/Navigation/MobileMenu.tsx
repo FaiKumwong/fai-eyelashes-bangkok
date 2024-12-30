@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import LanguageSelector from './LanguageSelector';
 
 interface TranslationType {
@@ -19,7 +19,20 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, translations, onNavigate, setIsMenuOpen }: MobileMenuProps) => {
-  console.log('MobileMenu rendered, isOpen:', isOpen);
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    setIsMenuOpen(false);
+    if (path === 'services' || path === 'testimonials' || path === 'contact') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  };
 
   if (!isOpen) return null;
 
@@ -28,37 +41,40 @@ const MobileMenu = ({ isOpen, translations, onNavigate, setIsMenuOpen }: MobileM
       <div className="flex flex-col items-center space-y-4 px-6">
         <LanguageSelector />
         <button 
-          onClick={() => onNavigate('/services')} 
+          onClick={() => handleNavigation('services')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.services}
         </button>
         <Link 
           to="/gallery" 
+          onClick={() => setIsMenuOpen(false)}
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.gallery}
         </Link>
         <button 
-          onClick={() => onNavigate('/testimonials')} 
+          onClick={() => handleNavigation('testimonials')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.testimonials}
         </button>
         <button 
-          onClick={() => onNavigate('/contact')} 
+          onClick={() => handleNavigation('contact')} 
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.contact}
         </button>
         <Link 
           to="/blog" 
+          onClick={() => setIsMenuOpen(false)}
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.blog}
         </Link>
         <Link 
           to="/about" 
+          onClick={() => setIsMenuOpen(false)}
           className="text-white hover:text-white/80 text-center w-full"
         >
           {translations.about}
