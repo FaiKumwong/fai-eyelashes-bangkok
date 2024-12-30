@@ -14,7 +14,6 @@ const BlogSidebar = () => {
       <ul className="space-y-2">
         <li><a href="#" className="text-blue-500 hover:underline">How to Care for Your Lash Extensions</a></li>
         <li><a href="#" className="text-blue-500 hover:underline">Top 5 Lash Trends of 2024</a></li>
-        <li><a href="#" className="text-blue-500 hover:underline">Client Spotlight: Sarah's Transformation</a></li>
       </ul>
     </div>
   );

@@ -3,6 +3,119 @@ import React from 'react';
 const BlogList = () => {
   return (
     <div className="space-y-8">
+      {/* New Blog Post */}
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-3xl font-bold mb-4 text-purple-800">How to Care for Your Lash Extensions</h2>
+        <h3 className="text-2xl font-semibold mb-6 text-pink-600">✨ Keep Your Lash Extensions Looking Fabulous! ✨</h3>
+        
+        <p className="text-gray-700 mb-6">
+          Got lash extensions and want them to last? Proper care is key to maintaining their look and longevity. Whether you're new to extensions or a seasoned pro, these tips will help you keep your lashes on point. Read on for the ultimate lash care guide! 💁‍✨
+        </p>
+
+        <h4 className="text-xl font-bold mb-4 text-purple-700">Essential Lash Extension Care Tips</h4>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">1. Cleanse Gently</h5>
+          <p className="text-gray-700 mb-4">
+            Your lash extensions need regular cleaning to stay fresh and healthy. Use a lash-safe cleanser to remove dirt, oils, and makeup residue. Skip the cotton pads and opt for a soft brush or fingertips to avoid pulling on your lashes.
+          </p>
+          <p className="text-gray-700 mb-4">
+            🔑 Pro Tip: Clean your lashes at least 2-3 times a week to prevent buildup and irritation.
+          </p>
+          
+          <img 
+            src="/lovable-uploads/9f107259-6f56-44fc-9063-9c6cd14f0508.png"
+            alt="Lash Extension Care Products"
+            className="w-full rounded-lg mb-8 shadow-lg"
+          />
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">2. Avoid Oil-Based Products</h5>
+          <p className="text-gray-700 mb-4">
+            Oil is the enemy of lash adhesive. Make sure your skincare and makeup products are oil-free. From cleansers to moisturizers, double-check the labels to keep your extensions intact.
+          </p>
+          <p className="text-gray-700 mb-4">
+            🚫 Say no to:<br />
+            - Waterproof mascara<br />
+            - Oil-based eyeliners<br />
+            - Heavy face creams near your eyes
+          </p>
+          
+          <img 
+            src="/lovable-uploads/8a857c32-c130-41f5-b5e8-9317158d7eca.png"
+            alt="Avoid Oil-Based Products"
+            className="w-full rounded-lg mb-8 shadow-lg"
+          />
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">3. Brush Daily</h5>
+          <p className="text-gray-700 mb-4">
+            Keep your lashes neat and tangle-free by gently brushing them with a clean spoolie brush every morning. This helps maintain their shape and keeps them looking flawless.
+          </p>
+          <p className="text-gray-700 mb-4">
+            🎀 Pro Tip: Brush upward and outward for a natural look.
+          </p>
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">4. Be Gentle</h5>
+          <p className="text-gray-700 mb-4">
+            Lash extensions are delicate, so handle them with care! Avoid rubbing your eyes, tugging at your lashes, or sleeping face-down. Consider a silk or satin pillowcase to minimize friction while you sleep.
+          </p>
+          <p className="text-gray-700 mb-4">
+            💤 Pro Tip: Try sleeping on your back to protect your extensions.
+          </p>
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">5. Schedule Refills</h5>
+          <p className="text-gray-700 mb-4">
+            Lash extensions naturally shed with your natural lashes. To maintain a full, fabulous look, schedule refills every 2 weeks. Regular appointments will keep your lashes lush and lovely.
+          </p>
+          <p className="text-gray-700 mb-4">
+            📅 Pro Tip: Book your refill in advance to secure your spot!
+          </p>
+          
+          <img 
+            src="/lovable-uploads/c6ec5e3b-e8fb-465a-b037-5353de31ecab.png"
+            alt="Schedule Refills"
+            className="w-full rounded-lg mb-8 shadow-lg"
+          />
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">What to Avoid</h5>
+          <p className="text-gray-700 mb-4">
+            To extend the life of your lash extensions, steer clear of:<br />
+            - Excessive steam or hot water<br />
+            - Harsh makeup removers<br />
+            - Touching your lashes frequently
+          </p>
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">Why Proper Care Matters</h5>
+          <p className="text-gray-700">
+            Taking care of your lash extensions not only preserves their beauty but also ensures your natural lashes stay healthy. A little extra effort goes a long way in keeping your lash game strong! 💪
+          </p>
+        </div>
+
+        <div className="mb-6">
+          <h5 className="text-lg font-semibold mb-2">Book Your Lash Appointment Today!</h5>
+          <p className="text-gray-700">
+            At Fai Eyelashes Bangkok, we're here to help you look and feel your best. Whether you're new to extensions or need a refill, our personalized consultations ensure you'll leave with lashes you love. 💕
+          </p>
+        </div>
+
+        <div className="mt-8 text-gray-600">
+          <p>📍 Fai Eyelashes Bangkok, On Nut</p>
+          <p>✨ Love your lashes every day! ✨</p>
+        </div>
+      </div>
+
+      {/* Existing Blog Post */}
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-3xl font-bold mb-4 text-purple-800">Fai Eyelashes & Trends for 2025</h2>
         <h3 className="text-2xl font-semibold mb-6 text-pink-600">✨ 2025's Hottest Eyelash Trends You Need to Know! ✨</h3>
