@@ -51,12 +51,12 @@ const About = () => {
           {/* Logo Section */}
           <div className="flex justify-center mt-8">
             <img 
-              src="/public/lovable-uploads/About_logo.jpg" 
+              src="/lovable-uploads/About_logo.jpg" 
               alt="Fai Eyelashes Logo" 
-              className="w-[300px] h-auto rounded-full" 
+              className="w-[300px] h-auto rounded-full shadow-lg" 
             />
-            </div>
           </div>
+        </div>
       </div>
     </div>
   );
