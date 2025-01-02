@@ -18,7 +18,7 @@ const BlogSidebar = () => {
       recent_posts: [
         {
           title: "How to Care for Your Lash Extensions",
-          url: "/src/data/blogs/blog1.ts"
+          url: "/blog#blog1"
         },
         {
           title: "Fai Eyelashes & Trends for 2025",
