@@ -18,15 +18,15 @@ const BlogSidebar = () => {
       recent_posts: [
         {
           title: "How to Care for Your Lash Extensions",
-          url: "#blog1"
+          url: "/blog#blog1"
         },
         {
           title: "Fai Eyelashes & Trends for 2025",
-          url: "#blog2"
+          url: "/blog#blog2"
         },
         {
           title: "Top 5 Lash Trends of 2024",
-          url: "#blog3"
+          url: "/blog#blog3"
         }
       ]
     },
@@ -42,15 +42,15 @@ const BlogSidebar = () => {
       recent_posts: [
         {
           title: "วิธีดูแลขนตาต่อ",
-          url: "#blog1"
+          url: "/blog#blog1"
         },
         {
           title: "ฝ้าย อายแลช & เทรนด์ขนตาปี 2025",
-          url: "#blog2"
+          url: "/blog#blog2"
         },
         {
           title: "เทรนด์ขนตายอดนิยม 5 อันดับปี 2024",
-          url: "#blog3"
+          url: "/blog#blog3"
         }
       ]
     }
