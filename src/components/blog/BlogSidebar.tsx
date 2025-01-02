@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Link } from 'react-router-dom';
 
 const BlogSidebar = () => {
   const { language } = useLanguage();
@@ -15,8 +16,18 @@ const BlogSidebar = () => {
         "Client Stories"
       ],
       recent_posts: [
-        "How to Care for Your Lash Extensions",
-        "Top 5 Lash Trends of 2024"
+        {
+          title: "How to Care for Your Lash Extensions",
+          url: "/blog/how-to-care-for-lash-extensions"
+        },
+        {
+          title: "Fai Eyelashes & Trends for 2025",
+          url: "/blog/trends-2025"
+        },
+        {
+          title: "Top 5 Lash Trends of 2024",
+          url: "/blog/top-trends-2024"
+        }
       ]
     },
     th: {
@@ -29,8 +40,18 @@ const BlogSidebar = () => {
         "เรื่องราวจากลูกค้า"
       ],
       recent_posts: [
-        "วิธีดูแลขนตาต่อ",
-        "เทรนด์ขนตายอดนิยม 5 อันดับปี 2024"
+        {
+          title: "วิธีดูแลขนตาต่อ",
+          url: "/blog/how-to-care-for-lash-extensions"
+        },
+        {
+          title: "ฝ้าย อายแลช & เทรนด์ขนตาปี 2025",
+          url: "/blog/trends-2025"
+        },
+        {
+          title: "เทรนด์ขนตายอดนิยม 5 อันดับปี 2024",
+          url: "/blog/top-trends-2024"
+        }
       ]
     }
   };
@@ -53,9 +74,12 @@ const BlogSidebar = () => {
         <ul className="space-y-3">
           {translations[language].recent_posts.map((post, index) => (
             <li key={index}>
-              <a href="#" className="text-blue-500 hover:text-blue-700 hover:underline">
-                {post}
-              </a>
+              <Link 
+                to={post.url}
+                className="text-blue-500 hover:text-blue-700 hover:underline"
+              >
+                {post.title}
+              </Link>
             </li>
           ))}
         </ul>
