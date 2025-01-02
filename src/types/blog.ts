@@ -7,6 +7,12 @@ export interface BlogSection {
   note?: string;
 }
 
+export interface BlogFooter {
+  location: string;
+  slogan: string;
+  content?: string;
+}
+
 export interface BlogContent {
   title: string;
   subtitle: string;
@@ -25,10 +31,7 @@ export interface BlogContent {
     title: string;
     content: string;
   };
-  footer: {
-    location: string;
-    slogan: string;
-  };
+  footer: BlogFooter;
 }
 
 export interface BlogTranslations {
