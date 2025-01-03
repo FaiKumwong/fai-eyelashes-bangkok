@@ -3,6 +3,7 @@ import { Calendar } from '@/components/ui/calendar';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { format } from 'date-fns';
 import { th } from 'date-fns/locale';
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const TIME_SLOTS = [
   '08:00-10:00',
@@ -49,14 +50,18 @@ const TimeSlotPicker = () => {
                 day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-full transition-all duration-200",
                 head_cell: "text-purple-600 font-bold text-sm uppercase tracking-wide",
                 nav_button: "text-purple-600 hover:bg-purple-100 rounded-full transition-colors p-1",
-                caption: "text-purple-800 font-bold text-lg capitalize flex justify-center space-x-1 mb-4",
-                nav_button_previous: "absolute left-1",
-                nav_button_next: "absolute right-1",
+                caption: "text-purple-800 font-bold text-lg capitalize flex items-center justify-center gap-4",
+                nav_button_previous: "static",
+                nav_button_next: "static",
                 table: "w-full border-collapse space-y-1",
                 head_row: "flex justify-between mb-2",
                 row: "flex w-full mt-2 justify-between",
                 cell: "text-center text-sm p-0 relative [&:has([aria-selected])]:bg-accent first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20 h-9 w-9",
                 months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0"
+              }}
+              components={{
+                IconLeft: () => <ChevronLeft className="h-4 w-4" />,
+                IconRight: () => <ChevronRight className="h-4 w-4" />
               }}
             />
           </div>
