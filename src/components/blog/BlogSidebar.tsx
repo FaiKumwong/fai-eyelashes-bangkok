@@ -1,9 +1,10 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const BlogSidebar = () => {
   const { language } = useLanguage();
+  const location = useLocation();
 
   const translations = {
     en: {
@@ -18,15 +19,15 @@ const BlogSidebar = () => {
       recent_posts: [
         {
           title: "How to Care for Your Lash Extensions",
-          url: "/blog#blog1"
+          url: "blog1"
         },
         {
           title: "Fai Eyelashes & Trends for 2025",
-          url: "/blog#blog2"
+          url: "blog2"
         },
         {
           title: "Top 5 Lash Trends of 2024",
-          url: "/blog#blog3"
+          url: "blog3"
         }
       ]
     },
@@ -42,17 +43,24 @@ const BlogSidebar = () => {
       recent_posts: [
         {
           title: "วิธีดูแลขนตาต่อ",
-          url: "/blog#blog1"
+          url: "blog1"
         },
         {
           title: "ฝ้าย อายแลช & เทรนด์ขนตาปี 2025",
-          url: "/blog#blog2"
+          url: "blog2"
         },
         {
           title: "เทรนด์ขนตายอดนิยม 5 อันดับปี 2024",
-          url: "/blog#blog3"
+          url: "blog3"
         }
       ]
+    }
+  };
+
+  const scrollToPost = (postId: string) => {
+    const element = document.getElementById(postId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -74,12 +82,12 @@ const BlogSidebar = () => {
         <ul className="space-y-3">
           {translations[language].recent_posts.map((post, index) => (
             <li key={index}>
-              <Link 
-                to={post.url}
-                className="text-blue-500 hover:text-blue-700 hover:underline"
+              <button 
+                onClick={() => scrollToPost(post.url)}
+                className="text-blue-500 hover:text-blue-700 hover:underline text-left"
               >
                 {post.title}
-              </Link>
+              </button>
             </li>
           ))}
         </ul>

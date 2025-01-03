@@ -9,6 +9,12 @@ const BlogList = () => {
     "/lovable-uploads/7a42b3eb-f2fb-46d9-afc1-236756a8fc4e.png"
   ];
 
+  const blog2Images = [
+    "/lovable-uploads/19f41b52-665c-453e-b6b1-29a5e5497b7a.png",
+    "/lovable-uploads/27480162-d35c-46eb-91b2-f8f5fc76628a.png",
+    "/lovable-uploads/1f53349f-d3c4-41da-9e4c-91de0b98deb2.png"
+  ];
+
   const blog3Images = [
     "/lovable-uploads/488937db-dea5-4f77-b6dd-48f212851001.png",
     "/lovable-uploads/4ff03cc2-bcfe-4145-8f1a-4e9d3de728ee.png",
@@ -21,7 +27,7 @@ const BlogList = () => {
         <BlogPost translations={blogPosts.blog1} images={blog1Images} />
       </div>
       <div id="blog2">
-        <BlogPost translations={blogPosts.blog2} />
+        <BlogPost translations={blogPosts.blog2} images={blog2Images} />
       </div>
       <div id="blog3">
         <BlogPost translations={blogPosts.blog3} images={blog3Images} />
