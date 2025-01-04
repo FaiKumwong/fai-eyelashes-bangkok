@@ -53,9 +53,9 @@ const TimeSlotPicker = () => {
               disabled={disabledDays}
               className="mx-auto bg-transparent"
               classNames={{
-                day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:from-purple-600 hover:to-purple-500 font-bold rounded-lg",
-                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-lg transition-all duration-200",
-                day_today: "bg-white rounded-lg border-2 border-purple-500",
+                day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:from-purple-600 hover:to-purple-500 font-bold rounded-2xl",
+                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-2xl transition-all duration-200 aspect-square flex items-center justify-center",
+                day_today: "bg-white rounded-full border-2 border-purple-500 aspect-square flex items-center justify-center",
                 day_disabled: "text-gray-400 line-through hover:bg-transparent hover:text-gray-400 cursor-not-allowed",
                 head_cell: "text-purple-600 font-bold text-sm uppercase tracking-wide",
                 nav_button: "text-purple-600 hover:bg-purple-100 rounded-full transition-colors p-1",
