@@ -5,6 +5,7 @@ export interface BlogSection {
   avoid?: string[];
   options?: string[];
   note?: string;
+  image?: string;
 }
 
 export interface BlogFooter {
