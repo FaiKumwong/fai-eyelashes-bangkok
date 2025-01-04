@@ -34,7 +34,8 @@ export const blog1: BlogTranslations = {
       {
         title: "5. Schedule Refills",
         content: "Lash extensions naturally shed with your natural lashes. To maintain a full, fabulous look, schedule refills every 2 weeks. Regular appointments will keep your lashes lush and lovely.",
-        tip: "📅 Pro Tip: Book your refill in advance to secure your spot!"
+        tip: "📅 Pro Tip: Book your refill in advance to secure your spot!",
+        image: "/lovable-uploads/7a42b3eb-f2fb-46d9-afc1-236756a8fc4e.png"
       }
     ],
     avoid: {
