@@ -3,7 +3,7 @@ import { Calendar } from '@/components/ui/calendar';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { format, isBefore, startOfToday } from 'date-fns';
 import { th } from 'date-fns/locale';
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronsLeft, ChevronsRight } from "lucide-react";
 
 const TIME_SLOTS = [
   '08:00-10:00',
@@ -53,8 +53,8 @@ const TimeSlotPicker = () => {
               disabled={disabledDays}
               className="mx-auto bg-transparent"
               classNames={{
-                day_selected: "bg-purple-500/30 text-purple-900 hover:bg-purple-500/40 font-bold rounded-2xl",
-                day: "text-gray-700 hover:bg-purple-500/20 hover:text-purple-900 rounded-2xl transition-all duration-200 aspect-square flex items-center justify-center",
+                day_selected: "bg-purple-500/30 text-purple-900 hover:bg-purple-500/40 font-bold rounded-full",
+                day: "text-gray-700 hover:bg-purple-500/20 hover:text-purple-900 rounded-full transition-all duration-200 aspect-square flex items-center justify-center",
                 day_today: "bg-white rounded-full border-2 border-purple-500 aspect-square flex items-center justify-center",
                 day_disabled: "text-gray-400 line-through hover:bg-transparent hover:text-gray-400 cursor-not-allowed",
                 head_cell: "text-purple-600 font-bold text-sm uppercase tracking-wide",
@@ -69,8 +69,8 @@ const TimeSlotPicker = () => {
                 months: "flex flex-col sm:flex-row space-y-4 sm:space-x-4 sm:space-y-0"
               }}
               components={{
-                IconLeft: () => <ChevronLeft className="h-4 w-4" />,
-                IconRight: () => <ChevronRight className="h-4 w-4" />
+                IconLeft: () => <ChevronsLeft className="h-4 w-4" />,
+                IconRight: () => <ChevronsRight className="h-4 w-4" />
               }}
             />
           </div>
