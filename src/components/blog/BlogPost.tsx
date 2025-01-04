@@ -43,7 +43,16 @@ const BlogPost = ({ translations, images }: BlogPostProps) => {
               ))}
             </p>
           )}
-          {images && images[index] && (
+          {/* Only show image after the tip for section 5 */}
+          {index === 4 && section.tip && images && images[index] && (
+            <img 
+              src={images[index]}
+              alt={`${content.title} - Section ${index + 1}`}
+              className="w-full rounded-lg mb-8 shadow-lg"
+            />
+          )}
+          {/* Show images for all other sections normally */}
+          {index !== 4 && images && images[index] && (
             <img 
               src={images[index]}
               alt={`${content.title} - Section ${index + 1}`}

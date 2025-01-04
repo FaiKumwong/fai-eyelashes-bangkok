@@ -1,7 +1,7 @@
 import React from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { format } from 'date-fns';
+import { format, isBefore, startOfToday } from 'date-fns';
 import { th } from 'date-fns/locale';
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -33,6 +33,12 @@ const TimeSlotPicker = () => {
     }
   };
 
+  const today = startOfToday();
+  
+  const disabledDays = {
+    before: today
+  };
+
   return (
     <div className="space-y-8 max-w-4xl mx-auto">
       <div className="grid md:grid-cols-2 gap-8">
@@ -44,10 +50,13 @@ const TimeSlotPicker = () => {
               selected={date}
               onSelect={setDate}
               locale={language === 'th' ? th : undefined}
+              disabled={disabledDays}
               className="mx-auto bg-transparent"
               classNames={{
-                day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:from-purple-600 hover:to-purple-500 font-bold",
-                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-full transition-all duration-200",
+                day_selected: "bg-gradient-to-r from-purple-500 to-purple-400 text-white hover:from-purple-600 hover:to-purple-500 font-bold rounded-lg",
+                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-lg transition-all duration-200",
+                day_today: "bg-white rounded-lg border-2 border-purple-500",
+                day_disabled: "text-gray-400 line-through hover:bg-transparent hover:text-gray-400 cursor-not-allowed",
                 head_cell: "text-purple-600 font-bold text-sm uppercase tracking-wide",
                 nav_button: "text-purple-600 hover:bg-purple-100 rounded-full transition-colors p-1",
                 caption: "text-purple-800 font-bold text-lg capitalize flex items-center justify-center gap-4",
