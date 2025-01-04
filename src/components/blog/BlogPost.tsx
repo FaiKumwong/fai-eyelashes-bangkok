@@ -35,6 +35,13 @@ const BlogPost = ({ translations, images }: BlogPostProps) => {
           {section.tip && (
             <p className="text-gray-700 mb-4">{section.tip}</p>
           )}
+          {section.image && (
+            <img 
+              src={section.image}
+              alt={`${section.title} illustration`}
+              className="w-full rounded-lg mb-8 shadow-lg"
+            />
+          )}
           {section.avoid && (
             <p className="text-gray-700 mb-4">
               🚫 {language === 'en' ? 'Say no to:' : 'หลีกเลี่ยง:'}<br />
@@ -42,22 +49,6 @@ const BlogPost = ({ translations, images }: BlogPostProps) => {
                 <span key={i}>- {item}<br /></span>
               ))}
             </p>
-          )}
-          {/* Only show image after the tip for section 5 */}
-          {index === 4 && section.tip && images && images[index] && (
-            <img 
-              src={images[index]}
-              alt={`${content.title} - Section ${index + 1}`}
-              className="w-full rounded-lg mb-8 shadow-lg"
-            />
-          )}
-          {/* Show images for all other sections normally */}
-          {index !== 4 && images && images[index] && (
-            <img 
-              src={images[index]}
-              alt={`${content.title} - Section ${index + 1}`}
-              className="w-full rounded-lg mb-8 shadow-lg"
-            />
           )}
         </div>
       ))}

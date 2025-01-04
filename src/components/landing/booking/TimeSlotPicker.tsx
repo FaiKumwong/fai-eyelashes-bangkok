@@ -53,15 +53,15 @@ const TimeSlotPicker = () => {
               disabled={disabledDays}
               className="mx-auto bg-transparent"
               classNames={{
-                day_selected: "bg-gradient-to-r from-purple-500/80 to-purple-400/80 text-white hover:from-purple-600 hover:to-purple-500 font-bold rounded-2xl",
-                day: "text-gray-700 hover:bg-gradient-to-r hover:from-purple-500 hover:to-purple-400 hover:text-white rounded-2xl transition-all duration-200 aspect-square flex items-center justify-center",
+                day_selected: "bg-purple-500/30 text-purple-900 hover:bg-purple-500/40 font-bold rounded-2xl",
+                day: "text-gray-700 hover:bg-purple-500/20 hover:text-purple-900 rounded-2xl transition-all duration-200 aspect-square flex items-center justify-center",
                 day_today: "bg-white rounded-full border-2 border-purple-500 aspect-square flex items-center justify-center",
                 day_disabled: "text-gray-400 line-through hover:bg-transparent hover:text-gray-400 cursor-not-allowed",
                 head_cell: "text-purple-600 font-bold text-sm uppercase tracking-wide",
                 nav_button: "text-purple-600 hover:bg-purple-100 rounded-full transition-colors p-1",
-                caption: "text-purple-800 font-bold text-lg capitalize flex items-center justify-center gap-4",
-                nav_button_previous: "static",
-                nav_button_next: "static",
+                caption: "text-purple-800 font-bold text-lg capitalize flex items-center justify-center gap-4 px-8",
+                nav_button_previous: "absolute left-1",
+                nav_button_next: "absolute right-1",
                 table: "w-full border-collapse space-y-1",
                 head_row: "flex justify-between mb-2",
                 row: "flex w-full mt-2 justify-between",
