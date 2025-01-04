@@ -71,15 +71,6 @@ const TimeSlotPicker = () => {
               components={{
                 IconLeft: () => <ChevronsLeft className="h-4 w-4" />,
                 IconRight: () => <ChevronsRight className="h-4 w-4" />,
-                Caption: ({ date }) => (
-                <div className="flex items-center justify-center gap-2 px-4">
-                <ChevronsLeft className="h-4 w-4" />
-                <span className="text-purple-800 font-bold text-lg capitalize">
-                {format(date, 'MMMM yyyy', { locale: language === 'th' ? th : undefined })}
-                </span>
-                <ChevronsRight className="h-4 w-4" />
-                </div>
-                ),
               }}
             />
           </div>
