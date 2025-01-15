@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Metadata } from '@/components/Metadata';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 const Gallery = () => {
   const { language } = useLanguage();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
   const images = [
+    "/IGpics/IG 0028.png",
     "/IGpics/IG 001.png",
     "/IGpics/IG 002.png",
     "/IGpics/IG 003.png",
@@ -32,8 +36,7 @@ const Gallery = () => {
     "/IGpics/IG 0025.png",
     "/IGpics/IG 0026.png",
     "/IGpics/IG 0027.png",
-    "/IGpics/IG 0028.png",
-  ];
+  ].reverse(); // Reverse the array so newest images appear first
 
   const translations = {
     en: {
@@ -60,13 +63,14 @@ const Gallery = () => {
           {images.map((image, index) => (
             <div 
               key={index} 
-              className="aspect-square overflow-hidden rounded-lg shadow-lg relative group"
+              className="aspect-square overflow-hidden rounded-lg shadow-lg relative group cursor-pointer"
+              onClick={() => setSelectedImage(image)}
             >
               {/* Display the main image */}
               <img
                 src={image}
                 alt={`Gallery image ${index + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
               {/* Watermark overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -80,6 +84,22 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
+      {/* Dialog for enlarged image */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent 
+          className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none"
+          onPointerLeave={() => setSelectedImage(null)}
+        >
+          {selectedImage && (
+            <img
+              src={selectedImage}
+              alt="Enlarged gallery image"
+              className="w-full h-full object-contain"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
