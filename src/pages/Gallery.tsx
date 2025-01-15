@@ -8,7 +8,7 @@ const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const images = [
-    "/IGpics/IG 0028.png",
+    "/lovable-uploads/1e1e0bc6-c11a-42d9-b66b-8b6998c27e29.png", // Updated IG 0028 image
     "/IGpics/IG 001.png",
     "/IGpics/IG 002.png",
     "/IGpics/IG 003.png",
@@ -88,16 +88,28 @@ const Gallery = () => {
       {/* Dialog for enlarged image */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent 
-          className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none"
+          className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none overflow-y-auto"
           onPointerLeave={() => setSelectedImage(null)}
         >
-          {selectedImage && (
-            <img
-              src={selectedImage}
-              alt="Enlarged gallery image"
-              className="w-full h-full object-contain"
-            />
-          )}
+          <div className="relative">
+            {selectedImage && (
+              <>
+                <img
+                  src={selectedImage}
+                  alt="Enlarged gallery image"
+                  className="w-full h-full object-contain transform scale-150"
+                />
+                {/* Enlarged watermark overlay for popup */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <img
+                    src="/IGpics/Waterlogo.png"
+                    alt="Watermark"
+                    className="opacity-25 w-full h-full object-contain"
+                  />
+                </div>
+              </>
+            )}
+          </div>
         </DialogContent>
       </Dialog>
     </div>
