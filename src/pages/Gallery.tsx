@@ -32,6 +32,7 @@ const Gallery = () => {
     "/IGpics/IG 0025.png",
     "/IGpics/IG 0026.png",
     "/IGpics/IG 0027.png",
+    "/IGpics/IG 0028.png",
   ];
 
   const translations = {
