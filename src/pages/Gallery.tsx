@@ -7,6 +7,12 @@ const Gallery = () => {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  // Prevent right-click context menu
+  const preventContextMenu = (e: React.MouseEvent) => {
+    e.preventDefault();
+    return false;
+  };
+
   // Reorder array to put newest images first
   const images = [
     "/lovable-uploads/1e1e0bc6-c11a-42d9-b66b-8b6998c27e29.png",
@@ -66,17 +72,20 @@ const Gallery = () => {
               key={index} 
               className="aspect-square overflow-hidden rounded-lg shadow-lg relative group cursor-pointer"
               onClick={() => setSelectedImage(image)}
+              onContextMenu={preventContextMenu}
             >
               <img
                 src={image}
                 alt={`Gallery image ${index + 1}`}
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                draggable="false"
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
                   src="/IGpics/Waterlogo.png"
                   alt="Watermark"
                   className="opacity-25 w-2/3 h-2/3 object-contain"
+                  draggable="false"
                 />
               </div>
             </div>
@@ -88,6 +97,7 @@ const Gallery = () => {
         <DialogContent 
           className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none overflow-y-auto"
           onPointerLeave={() => setSelectedImage(null)}
+          onContextMenu={preventContextMenu}
         >
           <div className="relative">
             {selectedImage && (
@@ -95,13 +105,15 @@ const Gallery = () => {
                 <img
                   src={selectedImage}
                   alt="Enlarged gallery image"
-                  className="w-full h-full object-contain transform scale-150"
+                  className="w-full h-full object-contain sm:transform sm:scale-150"
+                  draggable="false"
                 />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <img
                     src="/IGpics/Waterlogo.png"
                     alt="Watermark"
                     className="opacity-25 w-full h-full object-contain"
+                    draggable="false"
                   />
                 </div>
               </>
