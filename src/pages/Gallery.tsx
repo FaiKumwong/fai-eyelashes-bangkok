@@ -7,36 +7,37 @@ const Gallery = () => {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
+  // Reorder array to put newest images first
   const images = [
-    "/lovable-uploads/1e1e0bc6-c11a-42d9-b66b-8b6998c27e29.png", // Updated IG 0028 image
-    "/IGpics/IG 001.png",
-    "/IGpics/IG 002.png",
-    "/IGpics/IG 003.png",
-    "/IGpics/IG 004.png",
-    "/IGpics/IG 005.png",
-    "/IGpics/IG 006.png",
-    "/IGpics/IG 007.png",
-    "/IGpics/IG 008.png",
-    "/IGpics/IG 009.png",
-    "/IGpics/IG 0010.png",
-    "/IGpics/IG 0011.png",
-    "/IGpics/IG 0012.png",
-    "/IGpics/IG 0013.png",
-    "/IGpics/IG 0014.png",
-    "/IGpics/IG 0015.png",
-    "/IGpics/IG 0016.png",
-    "/IGpics/IG 0017.png",
-    "/IGpics/IG 0018.png",
-    "/IGpics/IG 0019.png",
-    "/IGpics/IG 0020.png",
-    "/IGpics/IG 0021.png",
-    "/IGpics/IG 0022.png",
-    "/IGpics/IG 0023.png",
-    "/IGpics/IG 0024.png",
-    "/IGpics/IG 0025.png",
-    "/IGpics/IG 0026.png",
+    "/lovable-uploads/1e1e0bc6-c11a-42d9-b66b-8b6998c27e29.png",
     "/IGpics/IG 0027.png",
-  ].reverse(); // Reverse the array so newest images appear first
+    "/IGpics/IG 0026.png",
+    "/IGpics/IG 0025.png",
+    "/IGpics/IG 0024.png",
+    "/IGpics/IG 0023.png",
+    "/IGpics/IG 0022.png",
+    "/IGpics/IG 0021.png",
+    "/IGpics/IG 0020.png",
+    "/IGpics/IG 0019.png",
+    "/IGpics/IG 0018.png",
+    "/IGpics/IG 0017.png",
+    "/IGpics/IG 0016.png",
+    "/IGpics/IG 0015.png",
+    "/IGpics/IG 0014.png",
+    "/IGpics/IG 0013.png",
+    "/IGpics/IG 0012.png",
+    "/IGpics/IG 0011.png",
+    "/IGpics/IG 0010.png",
+    "/IGpics/IG 009.png",
+    "/IGpics/IG 008.png",
+    "/IGpics/IG 007.png",
+    "/IGpics/IG 006.png",
+    "/IGpics/IG 005.png",
+    "/IGpics/IG 004.png",
+    "/IGpics/IG 003.png",
+    "/IGpics/IG 002.png",
+    "/IGpics/IG 001.png",
+  ];
 
   const translations = {
     en: {
@@ -66,13 +67,11 @@ const Gallery = () => {
               className="aspect-square overflow-hidden rounded-lg shadow-lg relative group cursor-pointer"
               onClick={() => setSelectedImage(image)}
             >
-              {/* Display the main image */}
               <img
                 src={image}
                 alt={`Gallery image ${index + 1}`}
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
-              {/* Watermark overlay */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
                   src="/IGpics/Waterlogo.png"
@@ -85,7 +84,6 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Dialog for enlarged image */}
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent 
           className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none overflow-y-auto"
@@ -99,7 +97,6 @@ const Gallery = () => {
                   alt="Enlarged gallery image"
                   className="w-full h-full object-contain transform scale-150"
                 />
-                {/* Enlarged watermark overlay for popup */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <img
                     src="/IGpics/Waterlogo.png"
