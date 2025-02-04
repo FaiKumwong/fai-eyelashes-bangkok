@@ -15,6 +15,10 @@ const Gallery = () => {
 
   // Reorder array to put newest images first
   const images = [
+    "/lovable-uploads/41e16786-acbe-4f16-a095-14843c45ad84.png",
+    "/lovable-uploads/4d4048fb-bbb6-46c5-ba68-525884edd9d4.png",
+    "/lovable-uploads/4695c3ce-5ed1-4637-bffd-26eae194190a.png",
+    "/lovable-uploads/9c460874-9b19-4d4a-af5f-3892d5b79807.png",
     "/lovable-uploads/1e1e0bc6-c11a-42d9-b66b-8b6998c27e29.png",
     "/IGpics/IG 0027.png",
     "/IGpics/IG 0026.png",
