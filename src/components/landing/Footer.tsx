@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, X } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import TikTokIcon from '../icons/TikTokIcon';
 
 const Footer = () => {
   const { language } = useLanguage();
@@ -79,6 +80,14 @@ const Footer = () => {
                   className="hover:text-pink-200 transition-colors"
                 >
                   <X className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@faieyelashbangkok" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-pink-200 transition-colors"
+                >
+                  <TikTokIcon className="w-6 h-6" />
                 </a>
               </div>
               <img 
