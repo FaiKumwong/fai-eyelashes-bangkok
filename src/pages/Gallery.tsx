@@ -1,19 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Metadata } from '@/components/Metadata';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogPortal, DialogOverlay } from "@/components/ui/dialog";
+import { ZoomIn, ZoomOut, X } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Gallery',
+};
 
 const Gallery = () => {
   const { language } = useLanguage();
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
 
-  // Prevent right-click context menu
+  useEffect(() => {
+    const checkScreenSize = () => {
+      const isSmallScreen = window.innerWidth < 1024;
+      setIsMobileOrTablet(isSmallScreen);
+      if (!isSmallScreen) {
+        setZoomLevel(1);
+      }
+    };
+
+    // Initial check
+    checkScreenSize();
+
+    // Add event listener
+    window.addEventListener('resize', checkScreenSize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  const handleCloseDialog = () => {
+    setSelectedImage(null);
+    setZoomLevel(1);
+  };
+
+  const handleZoomIn = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setZoomLevel(prev => Math.min(prev + 0.25, 2.5));
+  };
+
+  const handleZoomOut = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setZoomLevel(prev => Math.max(prev - 0.25, 0.5));
+  };
+
   const preventContextMenu = (e: React.MouseEvent) => {
     e.preventDefault();
     return false;
   };
 
-  // Reorder array to put newest images first
   const images = [
     "/IGpics/lash_care_tips_20250214.jpg",
     "/IGpics/Twitter 0033.jpg",
@@ -100,33 +139,79 @@ const Gallery = () => {
         </div>
       </div>
 
-      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
-        <DialogContent 
-          className="max-w-[90vw] max-h-[90vh] sm:max-w-[63vw] sm:max-h-[63vh] p-0 bg-transparent border-none overflow-y-auto"
-          onPointerLeave={() => setSelectedImage(null)}
-          onContextMenu={preventContextMenu}
-        >
-          <div className="relative">
-            {selectedImage && (
-              <>
-                <img
-                  src={selectedImage}
-                  alt="Enlarged gallery image"
-                  className="w-full h-full object-contain"
-                  draggable="false"
-                />
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <Dialog 
+        open={!!selectedImage} 
+        onOpenChange={handleCloseDialog}
+      >
+        <DialogPortal>
+          <DialogOverlay className="fixed inset-0 bg-black/90" />
+          <DialogContent 
+            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full outline-none border-none shadow-none bg-transparent p-0"
+            onContextMenu={preventContextMenu}
+          >
+            <div className="relative mx-auto flex flex-col items-center">
+              {/* Custom close button */}
+              <button
+                onClick={handleCloseDialog}
+                className="absolute -top-10 right-4 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors z-50"
+              >
+                <X className="w-6 h-6" />
+              </button>
+
+              {/* Image container */}
+              <div className="relative">
+                <div className="relative flex items-center justify-center">
                   <img
-                    src="/IGpics/Waterlogo.png"
-                    alt="Watermark"
-                    className="opacity-25 w-2/3 h-2/3 object-contain"
+                    src={selectedImage || ''}
+                    alt="Enlarged gallery image"
+                    className="object-contain select-none transition-all duration-200"
+                    style={{ 
+                      maxWidth: isMobileOrTablet ? 'min(85vw, 500px)' : '62.5vw',
+                      maxHeight: isMobileOrTablet ? 'min(75vh, 600px)' : '62.5vh',
+                      transform: `scale(${zoomLevel})`,
+                      transformOrigin: 'center',
+                    }}
                     draggable="false"
                   />
+
+                  {/* Watermark */}
+                  <div 
+                    className="absolute inset-0 flex items-center justify-center pointer-events-none select-none"
+                    style={{ 
+                      transform: `scale(${zoomLevel})`,
+                      transformOrigin: 'center'
+                    }}
+                  >
+                    <img
+                      src="/IGpics/Waterlogo.png"
+                      alt="Watermark"
+                      className="opacity-25 w-2/3 h-2/3 object-contain"
+                      draggable="false"
+                    />
+                  </div>
                 </div>
-              </>
-            )}
-          </div>
-        </DialogContent>
+
+                {/* Zoom controls - show for all devices */}
+                <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex gap-2">
+                  <button
+                    onClick={handleZoomOut}
+                    className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors"
+                    disabled={zoomLevel <= 0.5}
+                  >
+                    <ZoomOut className="w-5 h-5" />
+                  </button>
+                  <button
+                    onClick={handleZoomIn}
+                    className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors"
+                    disabled={zoomLevel >= 2.5}
+                  >
+                    <ZoomIn className="w-5 h-5" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </DialogContent>
+        </DialogPortal>
       </Dialog>
     </div>
   );
