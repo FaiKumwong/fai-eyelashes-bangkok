@@ -102,7 +102,7 @@ const Gallery = () => {
 
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent 
-          className="max-w-[63vw] max-h-[63vh] p-0 bg-transparent border-none overflow-y-auto"
+          className="max-w-[90vw] max-h-[90vh] sm:max-w-[63vw] sm:max-h-[63vh] p-0 bg-transparent border-none overflow-y-auto"
           onPointerLeave={() => setSelectedImage(null)}
           onContextMenu={preventContextMenu}
         >
