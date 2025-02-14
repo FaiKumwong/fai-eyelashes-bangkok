@@ -15,6 +15,9 @@ const Gallery = () => {
 
   // Reorder array to put newest images first
   const images = [
+    "/IGpics/lash_care_tips_20250214.jpg",
+    "/IGpics/Twitter 0033.jpg",
+    "/IGpics/Twitter 0034.jpg",
     "/lovable-uploads/41e16786-acbe-4f16-a095-14843c45ad84.png",
     "/lovable-uploads/4d4048fb-bbb6-46c5-ba68-525884edd9d4.png",
     "/lovable-uploads/4695c3ce-5ed1-4637-bffd-26eae194190a.png",
@@ -99,7 +102,7 @@ const Gallery = () => {
 
       <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
         <DialogContent 
-          className="max-w-[90vw] max-h-[90vh] p-0 bg-transparent border-none overflow-y-auto"
+          className="max-w-[63vw] max-h-[63vh] p-0 bg-transparent border-none overflow-y-auto"
           onPointerLeave={() => setSelectedImage(null)}
           onContextMenu={preventContextMenu}
         >
@@ -109,14 +112,14 @@ const Gallery = () => {
                 <img
                   src={selectedImage}
                   alt="Enlarged gallery image"
-                  className="w-full h-full object-contain sm:transform sm:scale-150"
+                  className="w-full h-full object-contain"
                   draggable="false"
                 />
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <img
                     src="/IGpics/Waterlogo.png"
                     alt="Watermark"
-                    className="opacity-25 w-full h-full object-contain"
+                    className="opacity-25 w-2/3 h-2/3 object-contain"
                     draggable="false"
                   />
                 </div>
