@@ -37,6 +37,11 @@ const Services = () => {
           title: "Lash Removal",
           description: "Professional and safe removal of old eyelash extensions",
           price: "฿ 150"
+        },
+        {
+          title: "Service at Home",
+          description: "Enjoy the convenience of professional lash services in the comfort of your own home.",
+          price: "฿ 999"
         }
       ]
     },
@@ -72,6 +77,11 @@ const Services = () => {
           title: "ถอดขนตา",
           description: "บริการถอดขนตาต่ออย่างมืออาชีพและปลอดภัย",
           price: "฿ 150"
+        },
+        {
+          title: "บริการถึงบ้าน",
+          description: "เพลิดเพลินกับความสะดวกสบายของบริการขนตามืออาชีพในบ้านของคุณเอง",
+          price: "฿ 999"
         }
       ]
     }
@@ -84,7 +94,7 @@ const Services = () => {
           {translations[language].title}
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
-          {translations[language].services.map((service, index) => (
+          {translations[language].services.slice(0, 6).map((service, index) => (
             <div key={index} className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-pink-100">
               <h3 className="text-xl font-semibold mb-4 text-purple-600">{service.title}</h3>
               <p className="text-gray-600 mb-4">{service.description}</p>
@@ -92,6 +102,15 @@ const Services = () => {
             </div>
           ))}
         </div>
+        {translations[language].services.length > 6 && (
+          <div className="flex justify-center mt-8">
+            <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-pink-100 max-w-sm">
+              <h3 className="text-xl font-semibold mb-4 text-purple-600">{translations[language].services[6].title}</h3>
+              <p className="text-gray-600 mb-4">{translations[language].services[6].description}</p>
+              <p className="text-2xl font-bold text-pink-500">{translations[language].services[6].price}</p>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

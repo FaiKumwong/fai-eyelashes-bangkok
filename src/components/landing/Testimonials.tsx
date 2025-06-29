@@ -62,6 +62,66 @@ const Testimonials = () => {
           rating: 5,
           comment: "Perfect lashes every time. Wouldn't go anywhere else!",
           date: "December 2024"
+        },
+        {
+          name: "Sophie",
+          rating: 5,
+          comment: "Amazing New Year transformation! My lashes look incredible for the celebrations.",
+          date: "January 2025"
+        },
+        {
+          name: "Maya",
+          rating: 5,
+          comment: "Started the year with beautiful lashes. Fai's work is always flawless!",
+          date: "February 2025"
+        },
+        {
+          name: "Isabella",
+          rating: 5,
+          comment: "Spring refresh with gorgeous volume lashes. Love the natural yet dramatic look!",
+          date: "March 2025"
+        },
+        {
+          name: "Chloe",
+          rating: 5,
+          comment: "Perfect for my spring wedding photos. Thank you Fai for making me feel beautiful!",
+          date: "March 2025"
+        },
+        {
+          name: "Olivia",
+          rating: 5,
+          comment: "April showers bring May flowers, and Fai brings perfect lashes! So happy with the results.",
+          date: "April 2025"
+        },
+        {
+          name: "Grace",
+          rating: 4,
+          comment: "Lovely experience as always. The hybrid lashes are perfect for my lifestyle.",
+          date: "April 2025"
+        },
+        {
+          name: "Zoe",
+          rating: 5,
+          comment: "May flowers have nothing on these lashes! Absolutely stunning work by Fai.",
+          date: "May 2025"
+        },
+        {
+          name: "Lily",
+          rating: 5,
+          comment: "Summer ready lashes! The color lashes are so unique and beautiful.",
+          date: "May 2025"
+        },
+        {
+          name: "Ava",
+          rating: 5,
+          comment: "June bride with perfect lashes! Fai made my wedding day even more special.",
+          date: "June 2025"
+        },
+        {
+          name: "Mia",
+          rating: 5,
+          comment: "Summer vacation ready! These lashes are perfect for all my beach photos.",
+          date: "June 2025"
         }
       ]
     },
@@ -121,6 +181,66 @@ const Testimonials = () => {
           rating: 5,
           comment: "ขนตาสวยทุกครั้งที่มา ไม่ไปที่อื่นแล้ว!",
           date: "ธันวาคม 2567"
+        },
+        {
+          name: "โซฟี",
+          rating: 5,
+          comment: "การเปลี่ยนแปลงปีใหม่ที่น่าทึ่ง! ขนตาสวยมากสำหรับงานเฉลิมฉลอง",
+          date: "มกราคม 2568"
+        },
+        {
+          name: "มายา",
+          rating: 5,
+          comment: "เริ่มต้นปีด้วยขนตาสวยๆ งานของฝ้ายไม่มีที่ติเสมอ!",
+          date: "กุมภาพันธ์ 2568"
+        },
+        {
+          name: "อิซาเบลลา",
+          rating: 5,
+          comment: "รีเฟรชฤดูใบไม้ผลิด้วยขนตาวอลลุ่มสวยงาม ชอบลุคธรรมชาติแต่โดดเด่น!",
+          date: "มีนาคม 2568"
+        },
+        {
+          name: "โคลอี้",
+          rating: 5,
+          comment: "เหมาะสำหรับภาพแต่งงานฤดูใบไม้ผลิ ขอบคุณฝ้ายที่ทำให้รู้สึกสวยงาม!",
+          date: "มีนาคม 2568"
+        },
+        {
+          name: "โอลิเวีย",
+          rating: 5,
+          comment: "ฝนเมษาทำให้ดอกไม้บานในเดือนพฤษภา และฝ้ายทำให้ขนตาสมบูรณ์แบบ! มีความสุขมากกับผลลัพธ์",
+          date: "เมษายน 2568"
+        },
+        {
+          name: "เกรซ",
+          rating: 4,
+          comment: "ประสบการณ์ที่น่ารักเหมือนเคย ขนตาไฮบริดเหมาะกับไลฟ์สไตล์ของฉันมาก",
+          date: "เมษายน 2568"
+        },
+        {
+          name: "โซอี้",
+          rating: 5,
+          comment: "ดอกไม้เดือนพฤษภาไม่มีอะไรเทียบขนตาเหล่านี้! งานของฝ้ายสวยงามมาก",
+          date: "พฤษภาคม 2568"
+        },
+        {
+          name: "ลิลลี่",
+          rating: 5,
+          comment: "ขนตาพร้อมสำหรับฤดูร้อน! ขนตาสีเป็นเอกลักษณ์และสวยงามมาก",
+          date: "พฤษภาคม 2568"
+        },
+        {
+          name: "เอวา",
+          rating: 5,
+          comment: "เจ้าสาวเดือนมิถุนายนกับขนตาสมบูรณ์แบบ! ฝ้ายทำให้วันแต่งงานพิเศษยิ่งขึ้น",
+          date: "มิถุนายน 2568"
+        },
+        {
+          name: "มีอา",
+          rating: 5,
+          comment: "พร้อมสำหรับวันหยุดฤดูร้อน! ขนตาเหล่านี้เหมาะสำหรับภาพถ่ายริมชายหาดทั้งหมด",
+          date: "มิถุนายน 2568"
         }
       ]
     }
@@ -134,7 +254,7 @@ const Testimonials = () => {
         </h2>
         <div className="overflow-x-auto pb-4">
           <div className="flex gap-8 min-w-max">
-            {translations[language].testimonials.map((testimonial, index) => (
+            {translations[language].testimonials.slice().reverse().map((testimonial, index) => (
               <div 
                 key={index} 
                 className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 border border-pink-100 w-80"
