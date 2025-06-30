@@ -1,0 +1,8 @@
+Contact: mailto:security@faieyelashes.com
+Contact: https://faieyelashes.com/contact
+Expires: 2026-06-30T23:59:59.000Z
+Encryption: https://faieyelashes.com/pgp-key.txt
+Acknowledgments: https://faieyelashes.com/security-acknowledgments
+Preferred-Languages: en, th
+Canonical: https://faieyelashes.com/.well-known/security.txt
+Policy: https://faieyelashes.com/security-policy
